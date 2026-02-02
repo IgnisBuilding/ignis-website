@@ -93,7 +93,6 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        badge={{ icon: 'groups', text: 'Our Story' }}
         title="Building a Safer Tomorrow"
         description="IGNIS is an AI-powered fire detection and intelligent evacuation system, developed as a Final Year Project at FAST-NUCES Karachi."
       >
@@ -101,7 +100,7 @@ export default function AboutPage() {
       </PageHero>
 
       {/* Stats */}
-      <StatsSection stats={stats} />
+      <StatsSection stats={stats} variant="dark" />
 
       {/* Mission */}
       <section className="w-full max-w-[1280px] px-6 lg:px-10 py-16">
@@ -120,8 +119,8 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {values.map((value) => (
-              <div key={value.title} className="bg-white rounded-xl p-6 border border-forest-green/5">
-                <div className="size-10 rounded-full bg-cream flex items-center justify-center mb-4">
+              <div key={value.title} className="bg-white rounded-xl p-6 border border-forest-green/20 hover:border-forest-green/40 transition-colors">
+                <div className="size-10 rounded-full bg-forest-green/10 flex items-center justify-center mb-4">
                   <span className="material-symbols-outlined text-forest-green">{value.icon}</span>
                 </div>
                 <h3 className="font-bold text-forest-dark mb-2">{value.title}</h3>

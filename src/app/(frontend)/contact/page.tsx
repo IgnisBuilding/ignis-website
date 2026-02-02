@@ -30,7 +30,6 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        badge={{ icon: 'connect_without_contact', text: 'Get In Touch' }}
         title="Let's Make Buildings Safer"
         description="Reach out for demos, evaluations, or academic collaboration. We're open to connecting with researchers, institutions, and industry professionals."
       />
@@ -44,7 +43,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-4">
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 size-10 rounded-full bg-cream-dark border border-forest-green/10 flex items-center justify-center text-forest-green">
+                  <div className="mt-1 size-10 rounded-full bg-cream-dark border border-forest-green/20 flex items-center justify-center text-forest-green">
                     <span className="material-symbols-outlined text-[20px]">mail</span>
                   </div>
                   <div>
@@ -59,7 +58,7 @@ export default function ContactPage() {
                 </div>
                 {/* Location */}
                 <div className="flex items-start gap-4">
-                  <div className="mt-1 size-10 rounded-full bg-cream-dark border border-forest-green/10 flex items-center justify-center text-forest-green">
+                  <div className="mt-1 size-10 rounded-full bg-cream-dark border border-forest-green/20 flex items-center justify-center text-forest-green">
                     <span className="material-symbols-outlined text-[20px]">location_on</span>
                   </div>
                   <div>

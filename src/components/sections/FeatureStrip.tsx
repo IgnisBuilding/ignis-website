@@ -16,7 +16,7 @@ export function FeatureStrip({ features }: FeatureStripProps) {
           {features.map((feature, index) => (
             <div key={feature.title} className="flex items-center gap-8 w-full md:w-auto">
               <div className="flex items-center gap-4 text-forest-dark">
-                <div className="size-12 rounded-full bg-cream flex items-center justify-center border border-forest-dark/5">
+                <div className="size-12 rounded-full bg-cream flex items-center justify-center border border-forest-green/20">
                   <span className="material-symbols-outlined text-forest-green">{feature.icon}</span>
                 </div>
                 <div>

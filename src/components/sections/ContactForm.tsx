@@ -65,7 +65,7 @@ export function ContactForm() {
   }
 
   return (
-    <Card variant="elevated" className="p-8 lg:p-10">
+    <Card variant="elevated" className="p-8 lg:p-10 border-forest-green/20">
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-forest-dark mb-2">Get In Touch</h2>
         <p className="text-forest-dark/60 text-sm">

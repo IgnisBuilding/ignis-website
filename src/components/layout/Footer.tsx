@@ -26,17 +26,17 @@ export function Footer() {
         <div className="w-full max-w-[1280px] px-6 lg:px-10 py-16 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
             {/* Brand Column */}
-            <div className="flex flex-col gap-6">
-              <Link href="/" className="flex items-center">
+            <div className="flex flex-col gap-4">
+              <Link href="/" className="flex items-center h-12">
                 <Image
                   src="/ignis_logo.png"
                   alt="IGNIS"
                   width={200}
                   height={65}
-                  className="h-14 w-auto brightness-0 invert"
+                  className="h-16 w-auto"
                 />
               </Link>
-              <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+              <p className="text-white/60 text-sm leading-relaxed max-w-xs mt-2">
                 Detect Fast. Evacuate Smart. Save Lives.
               </p>
               <div className="flex gap-4 mt-2">

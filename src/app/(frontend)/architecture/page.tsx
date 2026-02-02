@@ -75,7 +75,6 @@ export default function ArchitecturePage() {
   return (
     <>
       <PageHero
-        badge={{ icon: 'architecture', text: 'Technical Deep Dive' }}
         title="System Architecture"
         description="A comprehensive look at how IGNIS components work together to deliver real-time fire detection and intelligent evacuation guidance."
       />
@@ -86,7 +85,7 @@ export default function ArchitecturePage() {
 
         {/* Mind Map - Desktop */}
         <div className="hidden lg:block">
-          <div className="relative h-[580px] bg-gradient-to-b from-white via-cream/30 to-white rounded-3xl border border-forest-green/5">
+          <div className="relative h-[580px] bg-gradient-to-b from-white via-cream/30 to-white rounded-3xl border border-forest-green/20">
             {/* SVG Connections */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 580" preserveAspectRatio="xMidYMid meet">
               <defs>
@@ -271,7 +270,7 @@ export default function ArchitecturePage() {
         {/* Mind Map - Mobile/Tablet Fallback */}
         <div className="lg:hidden space-y-4">
           {systemLayers.map((layer) => (
-            <div key={layer.layer} className="bg-white rounded-2xl border border-forest-green/10 overflow-hidden shadow-md">
+            <div key={layer.layer} className="bg-white rounded-2xl border border-forest-green/20 overflow-hidden shadow-md">
               <div className="bg-forest-green p-4 flex items-center gap-3">
                 <span className="material-symbols-outlined text-accent-green">{layer.icon}</span>
                 <span className="text-white font-semibold">{layer.layer}</span>
@@ -402,7 +401,7 @@ export default function ArchitecturePage() {
                       <div className="absolute inset-0 rounded-full bg-forest-green/50 animate-ping"></div>
                     </div>
                     {/* Card */}
-                    <div className="bg-white rounded-xl p-4 shadow-sm border border-forest-green/10 hover:shadow-md hover:border-forest-green/30 transition-all">
+                    <div className="bg-white rounded-xl p-4 shadow-sm border border-forest-green/20 hover:shadow-md hover:border-forest-green/40 transition-all">
                       <div className="flex items-start gap-3">
                         <div className="size-10 rounded-lg bg-forest-green/10 flex items-center justify-center shrink-0">
                           <span className="material-symbols-outlined text-forest-green text-lg">{item.icon}</span>
@@ -426,7 +425,7 @@ export default function ArchitecturePage() {
         <h2 className="text-3xl font-extrabold text-forest-dark mb-8">Technical Specifications</h2>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {specs.map((spec) => (
-            <Card key={spec.label} variant="elevated">
+            <Card key={spec.label} variant="elevated" className="border-forest-green/20">
               <CardContent className="text-center py-8">
                 <p className="text-3xl font-extrabold text-forest-green mb-2">{spec.value}</p>
                 <h3 className="font-bold text-forest-dark mb-1">{spec.label}</h3>

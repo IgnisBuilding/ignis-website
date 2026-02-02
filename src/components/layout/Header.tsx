@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 
 const navLinks = [
@@ -15,6 +16,7 @@ const navLinks = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="sticky top-0 z-50 w-full bg-cream/90 backdrop-blur-md border-b border-forest-green/5">
@@ -34,15 +36,25 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-forest-dark/80 hover:text-forest-green text-sm font-medium transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors relative ${
+                    isActive
+                      ? 'text-forest-green font-semibold'
+                      : 'text-forest-dark/80 hover:text-forest-green'
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-forest-green rounded-full"></span>
+                  )}
+                </Link>
+              )
+            })}
           </nav>
 
           {/* CTA Buttons */}
@@ -68,16 +80,23 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-forest-green/5 px-6 py-4">
             <nav className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-forest-dark/80 hover:text-forest-green text-sm font-medium transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`text-sm font-medium transition-colors py-2 ${
+                      isActive
+                        ? 'text-forest-green font-semibold'
+                        : 'text-forest-dark/80 hover:text-forest-green'
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
             </nav>
           </div>
         )}

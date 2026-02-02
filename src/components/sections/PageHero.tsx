@@ -1,5 +1,5 @@
 interface PageHeroProps {
-  badge: {
+  badge?: {
     icon: string
     text: string
   }
@@ -21,10 +21,6 @@ export function PageHero({ badge, title, description, children }: PageHeroProps)
       <div className="absolute bottom-20 right-1/3 size-2 bg-forest-green/10 rounded-full hidden lg:block"></div>
 
       <div className="max-w-3xl relative">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-green/10 border border-accent-green/20 mb-6">
-          <span className="material-symbols-outlined text-sm text-forest-green">{badge.icon}</span>
-          <span className="text-xs font-bold text-forest-green uppercase tracking-wider">{badge.text}</span>
-        </div>
         <h1 className="text-forest-dark text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
           {title}
         </h1>

@@ -106,7 +106,7 @@ export function HeroSection({
 
             {/* System Health Widget */}
             <div className="absolute -bottom-6 -right-6 lg:bottom-12 lg:-left-12 lg:right-auto z-20 w-72">
-              <div className="bg-white rounded-xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-forest-dark/5 flex flex-col gap-3">
+              <div className="bg-white rounded-xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-forest-green/20 flex flex-col gap-3">
                 <div className="flex items-center justify-between border-b border-gray-100 pb-3">
                   <div className="flex items-center gap-2">
                     <span className="material-symbols-outlined text-forest-green">shield</span>

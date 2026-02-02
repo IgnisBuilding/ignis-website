@@ -51,7 +51,6 @@ export default function TechnologyPage() {
   return (
     <>
       <PageHero
-        badge={{ icon: 'memory', text: 'AI-Powered' }}
         title="Technology That Saves Lives"
         description="IGNIS combines state-of-the-art machine learning with real-time data processing to detect fire hazards faster and guide evacuations smarter than ever before."
       />
@@ -61,7 +60,7 @@ export default function TechnologyPage() {
         <h2 className="text-3xl font-extrabold text-forest-dark mb-8">Core Capabilities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {coreCapabilities.map((cap) => (
-            <Card key={cap.title} variant="elevated" className="hover:shadow-lg transition-shadow">
+            <Card key={cap.title} variant="elevated" className="hover:shadow-lg transition-shadow border-forest-green/20">
               <CardContent className="flex gap-4">
                 <div className="size-12 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
                   <span className="material-symbols-outlined text-forest-green">{cap.icon}</span>
@@ -145,7 +144,7 @@ export default function TechnologyPage() {
         <h2 className="text-3xl font-extrabold text-forest-dark mb-8">Technology Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {techStack.map((tech) => (
-            <div key={tech.name} className="bg-white rounded-xl p-4 border border-forest-green/5 flex items-center gap-4">
+            <div key={tech.name} className="bg-white rounded-xl p-4 border border-forest-green/20 flex items-center gap-4 hover:border-forest-green/40 transition-colors">
               <div className="size-10 rounded-lg bg-cream flex items-center justify-center">
                 <span className="text-sm font-bold text-forest-green">{tech.category.slice(0, 2).toUpperCase()}</span>
               </div>
@@ -160,7 +159,7 @@ export default function TechnologyPage() {
 
       {/* CTA */}
       <section className="w-full max-w-[1280px] px-6 lg:px-10 pb-16">
-        <div className="bg-cream-dark rounded-3xl p-8 lg:p-12 text-center">
+        <div className="bg-cream-dark rounded-3xl p-8 lg:p-12 text-center border border-forest-green/20">
           <h2 className="text-2xl font-bold text-forest-dark mb-4">Want to Learn More?</h2>
           <p className="text-forest-dark/70 max-w-xl mx-auto mb-6">
             Explore our system architecture or get in touch to discuss how IGNIS
