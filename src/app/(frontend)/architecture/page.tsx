@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { PageHero } from '@/components/sections/PageHero'
@@ -85,17 +86,17 @@ export default function ArchitecturePage() {
 
         {/* Mind Map - Desktop */}
         <div className="hidden lg:block">
-          <div className="relative h-[580px] bg-gradient-to-b from-white via-cream/30 to-white rounded-3xl border border-forest-green/20">
+          <div className="relative h-[580px] bg-forest-dark rounded-3xl border border-forest-green/20 overflow-hidden">
             {/* SVG Connections */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 580" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <linearGradient id="mainBranch" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#2D5A3D" stopOpacity="0.6" />
-                  <stop offset="100%" stopColor="#2D5A3D" stopOpacity="0.6" />
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.5" />
                 </linearGradient>
                 <linearGradient id="subBranch" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#2D5A3D" stopOpacity="0.35" />
-                  <stop offset="100%" stopColor="#2D5A3D" stopOpacity="0.35" />
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.25" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.25" />
                 </linearGradient>
               </defs>
 
@@ -132,14 +133,18 @@ export default function ArchitecturePage() {
 
             {/* Central Node */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="px-5 py-3.5 bg-forest-green rounded-2xl shadow-xl shadow-forest-green/25">
-                <div className="flex items-center gap-3">
-                  <div className="size-9 rounded-xl bg-white/15 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-accent-green text-xl">local_fire_department</span>
-                  </div>
+              <div className="px-6 py-4 bg-white/90 rounded-2xl shadow-lg">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src="/ignis_logo.png"
+                    alt="IGNIS"
+                    width={160}
+                    height={52}
+                    className="h-14 w-auto object-contain"
+                  />
                   <div>
-                    <p className="text-white font-bold text-base leading-tight">IGNIS</p>
-                    <p className="text-white/60 text-[11px]">System Architecture</p>
+                    <p className="text-forest-dark font-bold text-2xl leading-tight">IGNIS</p>
+                    <p className="text-forest-dark/60 text-sm">System Architecture</p>
                   </div>
                 </div>
               </div>
@@ -147,120 +152,120 @@ export default function ArchitecturePage() {
 
             {/* Perception Layer */}
             <div className="absolute left-[25%] top-[27%] -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="px-3.5 py-2 bg-forest-green text-white rounded-xl shadow-md text-sm font-semibold flex items-center gap-2">
-                <span className="material-symbols-outlined text-accent-green text-base">sensors</span>
+              <div className="px-3.5 py-2 bg-white/90 text-forest-dark rounded-xl text-sm font-semibold flex items-center gap-2 shadow-md">
+                <span className="material-symbols-outlined text-forest-green text-base">sensors</span>
                 Perception
               </div>
             </div>
 
             {/* Perception Components */}
             <div className="absolute left-[2%] top-[9%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>Visual Sensors
               </div>
             </div>
             <div className="absolute left-[2%] top-[18%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>Thermal Sensors
               </div>
             </div>
             <div className="absolute left-[2%] top-[31%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>Environmental
               </div>
             </div>
             <div className="absolute left-[2%] top-[40%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>IoT Gateway
               </div>
             </div>
 
             {/* Intelligence Layer */}
             <div className="absolute right-[25%] top-[27%] translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="px-3.5 py-2 bg-forest-green text-white rounded-xl shadow-md text-sm font-semibold flex items-center gap-2">
-                <span className="material-symbols-outlined text-accent-green text-base">psychology</span>
+              <div className="px-3.5 py-2 bg-white/90 text-forest-dark rounded-xl text-sm font-semibold flex items-center gap-2 shadow-md">
+                <span className="material-symbols-outlined text-forest-green text-base">psychology</span>
                 Intelligence
               </div>
             </div>
 
             {/* Intelligence Components */}
             <div className="absolute right-[2%] top-[9%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 Fire Detection CNN<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
             <div className="absolute right-[2%] top-[18%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 Anomaly Detection<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
             <div className="absolute right-[2%] top-[31%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 Fusion Engine<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
             <div className="absolute right-[2%] top-[40%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 Risk Assessment<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
 
             {/* Routing Layer */}
             <div className="absolute left-[25%] top-[73%] -translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="px-3.5 py-2 bg-forest-green text-white rounded-xl shadow-md text-sm font-semibold flex items-center gap-2">
-                <span className="material-symbols-outlined text-accent-green text-base">route</span>
+              <div className="px-3.5 py-2 bg-white/90 text-forest-dark rounded-xl text-sm font-semibold flex items-center gap-2 shadow-md">
+                <span className="material-symbols-outlined text-forest-green text-base">route</span>
                 Routing
               </div>
             </div>
 
             {/* Routing Components */}
             <div className="absolute left-[2%] top-[54%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>Graph Model
               </div>
             </div>
             <div className="absolute left-[2%] top-[63%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>Pathfinding Engine
               </div>
             </div>
             <div className="absolute left-[2%] top-[76%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>Crowd Simulation
               </div>
             </div>
             <div className="absolute left-[2%] top-[85%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 <span className="inline-block size-1.5 rounded-full bg-accent-green mr-2"></span>Route Optimizer
               </div>
             </div>
 
             {/* Interface Layer */}
             <div className="absolute right-[25%] top-[73%] translate-x-1/2 -translate-y-1/2 z-10">
-              <div className="px-3.5 py-2 bg-forest-green text-white rounded-xl shadow-md text-sm font-semibold flex items-center gap-2">
-                <span className="material-symbols-outlined text-accent-green text-base">devices</span>
+              <div className="px-3.5 py-2 bg-white/90 text-forest-dark rounded-xl text-sm font-semibold flex items-center gap-2 shadow-md">
+                <span className="material-symbols-outlined text-forest-green text-base">devices</span>
                 Interface
               </div>
             </div>
 
             {/* Interface Components */}
             <div className="absolute right-[2%] top-[54%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 Control Dashboard<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
             <div className="absolute right-[2%] top-[63%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 Mobile Alerts<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
             <div className="absolute right-[2%] top-[76%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 Visual Guidance<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
             <div className="absolute right-[2%] top-[85%] z-10">
-              <div className="px-3 py-1.5 bg-white/95 rounded-lg shadow-sm border border-gray-200/60 text-[13px] text-forest-dark/80">
+              <div className="px-3 py-1.5 bg-white/90 rounded-lg text-[13px] text-forest-dark/80">
                 API Gateway<span className="inline-block size-1.5 rounded-full bg-accent-green ml-2"></span>
               </div>
             </div>
@@ -270,16 +275,16 @@ export default function ArchitecturePage() {
         {/* Mind Map - Mobile/Tablet Fallback */}
         <div className="lg:hidden space-y-4">
           {systemLayers.map((layer) => (
-            <div key={layer.layer} className="bg-white rounded-2xl border border-forest-green/20 overflow-hidden shadow-md">
-              <div className="bg-forest-green p-4 flex items-center gap-3">
+            <div key={layer.layer} className="bg-forest-dark rounded-2xl border border-forest-green/20 overflow-hidden">
+              <div className="bg-forest-green/30 p-4 flex items-center gap-3 border-b border-forest-green/20">
                 <span className="material-symbols-outlined text-accent-green">{layer.icon}</span>
                 <span className="text-white font-semibold">{layer.layer}</span>
               </div>
               <div className="p-4 space-y-2">
                 {layer.components.map((comp) => (
-                  <div key={comp.name} className="flex items-center gap-3 p-2.5 bg-cream/30 rounded-lg">
+                  <div key={comp.name} className="flex items-center gap-3 p-2.5 bg-white/10 rounded-lg">
                     <div className="size-1.5 rounded-full bg-accent-green"></div>
-                    <span className="text-sm text-forest-dark/80">{comp.name}</span>
+                    <span className="text-sm text-white/80">{comp.name}</span>
                   </div>
                 ))}
               </div>

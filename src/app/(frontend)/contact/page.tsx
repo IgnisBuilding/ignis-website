@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const projectInfo = [
   {
     title: 'Project Type',
-    items: ['Final Year Project', 'FAST-NUCES', '2024-2025'],
+    items: ['Final Year Project', 'FAST-NUCES', '2025-2026'],
   },
   {
     title: 'Domain',

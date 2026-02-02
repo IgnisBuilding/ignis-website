@@ -60,7 +60,7 @@ export function HeroSection({
           <div className="pt-8 border-t border-forest-dark/10 mt-2">
             <p className="text-sm font-semibold text-forest-dark/60 mb-4">Final Year Project - FAST-NUCES</p>
             <div className="flex items-center gap-6 opacity-60 grayscale mix-blend-multiply">
-              <span className="text-lg font-sans font-bold tracking-tight">FYP 2025</span>
+              <span className="text-lg font-sans font-bold tracking-tight">FYP 2026</span>
               <span className="text-lg font-sans font-black tracking-tighter">Academic</span>
               <span className="text-lg font-serif italic font-bold">Research</span>
               <span className="hidden sm:block text-lg font-sans font-bold tracking-widest uppercase text-xs">FAST-NUCES</span>

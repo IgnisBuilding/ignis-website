@@ -23,7 +23,6 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        badge="Live AI Fire Intelligence"
         title={
           <>
             Smart Fire Detection <br />

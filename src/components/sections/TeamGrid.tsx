@@ -1,9 +1,10 @@
-import { Card, CardContent } from '@/components/ui/Card'
+import Image from 'next/image'
 
 interface TeamMember {
   name: string
   role: string
   description?: string
+  image?: string
 }
 
 interface TeamGridProps {
@@ -23,8 +24,18 @@ export function TeamGrid({ title = 'Meet the Team', subtitle, members }: TeamGri
         {members.map((member) => (
           <div key={member.name} className="bg-forest-dark rounded-2xl p-6 hover:bg-forest-green transition-colors group">
             <div className="text-center">
-              <div className="size-20 rounded-full bg-white/10 border border-accent-green/30 flex items-center justify-center mx-auto mb-4 group-hover:border-accent-green/50 transition-colors">
-                <span className="material-symbols-outlined text-accent-green text-3xl">person</span>
+              <div className="size-24 rounded-full bg-white/10 border-2 border-accent-green/30 flex items-center justify-center mx-auto mb-4 group-hover:border-accent-green/50 transition-colors overflow-hidden">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={96}
+                    height={96}
+                    className="size-full object-cover"
+                  />
+                ) : (
+                  <span className="material-symbols-outlined text-accent-green text-3xl">person</span>
+                )}
               </div>
               <h3 className="font-bold text-lg text-white mb-1">{member.name}</h3>
               <p className="text-sm text-accent-green font-medium mb-2">{member.role}</p>

@@ -14,21 +14,25 @@ const teamMembers = [
     name: 'Mohammad Irtiza',
     role: 'Project Lead',
     description: 'Full-stack development & system architecture',
+    image: '/irtiza.jpeg',
   },
   {
     name: 'Ali Raza',
-    role: 'AI/ML Engineer',
-    description: 'Fire detection algorithms & model training',
+    role: 'Full Stack Developer',
+    description: 'Frontend & backend development',
+    image: '/aliraza.jpeg',
   },
   {
     name: 'Ahmed Haque',
-    role: 'Systems Engineer',
-    description: 'Hardware integration & sensor networks',
+    role: 'Full Stack Developer',
+    description: 'Frontend & backend development',
+    image: '/ahmed.jpeg',
   },
   {
     name: 'Dr. Farrukh Shahid',
     role: 'Faculty Advisor',
     description: 'Research guidance & academic supervision',
+    image: '/Dr_farrukh.jpeg',
   },
 ]
 
@@ -151,7 +155,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-white mb-4">Academic Project</h2>
           <p className="text-white/70 max-w-2xl mx-auto mb-6">
             IGNIS is developed as a Final Year Project (FYP) at FAST-NUCES Karachi,
-            Pakistan during the 2024-2025 academic year. We are open to academic
+            Pakistan during the 2025-2026 academic year. We are open to academic
             collaboration and research partnerships.
           </p>
           <div className="flex justify-center gap-4 text-white/40 text-sm">
@@ -159,7 +163,7 @@ export default function AboutPage() {
             <span>•</span>
             <span>Computer Science Department</span>
             <span>•</span>
-            <span>FYP 2024-2025</span>
+            <span>FYP 2025-2026</span>
           </div>
         </div>
       </section>

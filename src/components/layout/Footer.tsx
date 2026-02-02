@@ -1,110 +1,81 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Button } from '@/components/ui/Button'
 
-const platformLinks = [
-  { href: '/technology', label: 'Intelligence Core' },
-  { href: '/architecture', label: 'Sensor Mesh' },
-  { href: '/solutions', label: 'Integrations' },
-  { href: '/architecture', label: 'System Health' },
-]
-
-const companyLinks = [
-  { href: '/about', label: 'About Us' },
-  { href: '/about#team', label: 'Team' },
+const navLinks = [
+  { href: '/solutions', label: 'Solutions' },
+  { href: '/technology', label: 'Technology' },
+  { href: '/architecture', label: 'Architecture' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
-]
-
-const legalLinks = [
-  { href: '#', label: 'Privacy Policy' },
-  { href: '#', label: 'Terms of Service' },
 ]
 
 export function Footer() {
   return (
-    <footer className="bg-forest-dark text-white border-t border-white/5 w-full">
+    <footer className="bg-forest-dark text-white w-full">
       <div className="layout-container">
         <div className="w-full max-w-[1280px] px-6 lg:px-10 py-16 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
-            {/* Brand Column */}
-            <div className="flex flex-col gap-4">
-              <Link href="/" className="flex items-center h-12">
+
+          {/* Main Footer Content - 3 Column */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+
+            {/* Column 1: Brand */}
+            <div className="flex flex-col items-center md:items-start">
+              <Link href="/" className="mb-5">
                 <Image
                   src="/ignis_logo.png"
                   alt="IGNIS"
-                  width={200}
-                  height={65}
-                  className="h-16 w-auto"
+                  width={240}
+                  height={78}
+                  className="h-[78px] w-auto"
                 />
               </Link>
-              <p className="text-white/60 text-sm leading-relaxed max-w-xs mt-2">
-                Detect Fast. Evacuate Smart. Save Lives.
+              <p className="text-white/50 text-sm leading-relaxed text-center md:text-left">
+                AI-powered fire detection and intelligent evacuation system.
               </p>
-              <div className="flex gap-4 mt-2">
-                <a href="#" className="text-white/40 hover:text-white transition-colors">
-                  <span className="material-symbols-outlined text-xl">dataset</span>
-                </a>
-                <a href="#" className="text-white/40 hover:text-white transition-colors">
-                  <span className="material-symbols-outlined text-xl">public</span>
-                </a>
-                <a href="#" className="text-white/40 hover:text-white transition-colors">
-                  <span className="material-symbols-outlined text-xl">hub</span>
-                </a>
-              </div>
             </div>
 
-            {/* Platform Links */}
-            <div>
-              <h4 className="text-sm font-bold uppercase tracking-wider text-accent-green mb-6">Platform</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                {platformLinks.map((link) => (
-                  <li key={link.label}>
-                    <Link href={link.href} className="hover:text-white transition-colors">
-                      {link.label}
-                    </Link>
-                  </li>
+            {/* Column 2: Quick Links */}
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="text-sm font-semibold text-white mb-5">Quick Links</h4>
+              <nav className="flex flex-col items-center md:items-start gap-3">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm text-white/50 hover:text-accent-green transition-colors"
+                  >
+                    {link.label}
+                  </Link>
                 ))}
-              </ul>
+              </nav>
             </div>
 
-            {/* Company Links */}
-            <div>
-              <h4 className="text-sm font-bold uppercase tracking-wider text-accent-green mb-6">Company</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                {companyLinks.map((link) => (
-                  <li key={link.label}>
-                    <Link href={link.href} className="hover:text-white transition-colors">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal Links */}
-            <div>
-              <h4 className="text-sm font-bold uppercase tracking-wider text-accent-green mb-6">Legal</h4>
-              <ul className="flex flex-col gap-3 text-sm text-white/70">
-                {legalLinks.map((link) => (
-                  <li key={link.label}>
-                    <Link href={link.href} className="hover:text-white transition-colors">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            {/* Column 3: Contact + CTA */}
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="text-sm font-semibold text-white mb-5">Get in Touch</h4>
+              <a
+                href="mailto:ignis.fyp@gmail.com"
+                className="text-sm text-white/50 hover:text-accent-green transition-colors mb-2"
+              >
+                ignis.fyp@gmail.com
+              </a>
+              <p className="text-sm text-white/50 mb-1">FAST-NUCES Karachi</p>
+              <p className="text-xs text-white/30 mb-6">Computer Science • FYP 2025-2026</p>
+              <Button href="/contact" variant="primary" size="sm">
+                Request Demo
+              </Button>
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-white/40">
-              © 2025 IGNIS – Final Year Project (FAST-NUCES). All rights reserved.
+          <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-white/30">
+              © 2026 IGNIS. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2 text-xs text-white/40">
-                <span className="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
-                All Systems Operational
-              </div>
+            <div className="flex items-center gap-2 text-xs text-white/30">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-green"></span>
+              Built with passion at FAST-NUCES
             </div>
           </div>
         </div>
