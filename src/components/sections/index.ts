@@ -1,0 +1,6 @@
+export { HeroSection } from './HeroSection'
+export { FeatureStrip } from './FeatureStrip'
+export { TeamGrid } from './TeamGrid'
+export { Timeline } from './Timeline'
+export { ContactForm } from './ContactForm'
+export { StatsSection } from './StatsSection'

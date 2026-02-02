@@ -1,0 +1,18 @@
+<svg width="48" height="56" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer green flames -->
+  <path d="M24 0C24 0 8 18 8 32C8 44 15 52 24 56C33 52 40 44 40 32C40 18 24 0 24 0Z" fill="#1a5c45"/>
+  <path d="M24 4C24 4 12 20 12 32C12 42 17 48 24 52C31 48 36 42 36 32C36 20 24 4 24 4Z" fill="#1a3c34"/>
+  <!-- Left flame accent -->
+  <path d="M16 24C16 24 10 32 10 40C10 46 14 50 20 52C14 48 12 42 12 36C12 30 16 24 16 24Z" fill="#2d5a4a"/>
+  <!-- Right flame accent -->
+  <path d="M32 24C32 24 38 32 38 40C38 46 34 50 28 52C34 48 36 42 36 36C36 30 32 24 32 24Z" fill="#2d5a4a"/>
+  <!-- Inner orange flame -->
+  <path d="M24 20C24 20 16 30 16 40C16 48 20 52 24 54C28 52 32 48 32 40C32 30 24 20 24 20Z" fill="url(#orangeGradient)"/>
+  <defs>
+    <linearGradient id="orangeGradient" x1="24" y1="20" x2="24" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f5a623"/>
+      <stop offset="50%" stop-color="#f7931e"/>
+      <stop offset="100%" stop-color="#e85d04"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,744 @@
+/* IGNIS Admin Theme - Matching Website Design */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+:root {
+  /* IGNIS Brand Colors */
+  --color-forest-green: #1B3D2F;
+  --color-forest-dark: #122820;
+  --color-accent-green: #8FD694;
+  --color-cream: #FDFBF7;
+  --color-cream-dark: #F5F0E8;
+  --color-white: #FFFFFF;
+  --color-border: #E5E3DF;
+  --color-text: #1B3D2F;
+  --color-text-muted: rgba(27, 61, 47, 0.6);
+}
+
+/* Reset and Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background-color: var(--color-cream) !important;
+  color: var(--color-text) !important;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: var(--color-forest-dark) !important;
+  margin-bottom: 8px !important;
+  letter-spacing: -0.02em;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', sans-serif !important;
+  color: var(--color-forest-dark) !important;
+  font-weight: 700 !important;
+}
+
+p {
+  font-family: 'Manrope', sans-serif !important;
+  color: var(--color-text-muted) !important;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Main Container - Create First User Page */
+.template-minimal,
+.template-default,
+[class*="template"] {
+  background-color: var(--color-cream) !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  padding: 60px 24px !important;
+}
+
+/* Form Card Container */
+.template-minimal > div,
+.template-default > div,
+form {
+  background: var(--color-white) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 4px 32px rgba(27, 61, 47, 0.08) !important;
+  padding: 48px !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  margin: 0 auto !important;
+}
+
+/* Remove individual field cards */
+.field-type,
+.render-fields > div,
+[class*="field"],
+.card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-bottom: 24px !important;
+  border-radius: 0 !important;
+}
+
+/* Labels */
+label {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--color-forest-dark) !important;
+  display: block !important;
+  margin-bottom: 8px !important;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  font-family: 'Manrope', sans-serif !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 14px 18px !important;
+  font-size: 16px !important;
+  color: var(--color-text) !important;
+  background-color: var(--color-white) !important;
+  border: 2px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-forest-green) !important;
+  box-shadow: 0 0 0 4px rgba(27, 61, 47, 0.1) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted) !important;
+}
+
+/* Native Select/Dropdown - only for actual select elements */
+select {
+  font-family: 'Manrope', sans-serif !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 14px 18px !important;
+  padding-right: 48px !important;
+  font-size: 16px !important;
+  color: var(--color-text) !important;
+  background-color: var(--color-white) !important;
+  border: 2px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  outline: none !important;
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%231B3D2F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 20px !important;
+}
+
+select:focus {
+  border-color: var(--color-forest-green) !important;
+  box-shadow: 0 0 0 4px rgba(27, 61, 47, 0.1) !important;
+}
+
+/* ===== PAYLOAD CMS SELECT COMPONENT FIXES ===== */
+
+/* NUCLEAR OPTION: Reset ALL borders inside select field except the control */
+.field-type.select *:not(.rs__control):not([class*="rs__control"]),
+.field-type[class*="select"] *:not(.rs__control):not([class*="rs__control"]) {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Field type wrapper for select - NO border */
+.field-type.select,
+.field-type[class*="select"] {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Field wrapper - NO border */
+.field-type__wrap {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Main react-select container - NO border here */
+.react-select,
+[class*="css-"][class*="-container"] {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* The actual control - THIS gets the border */
+.rs__control,
+[class*="rs__control"] {
+  font-family: 'Manrope', sans-serif !important;
+  background-color: var(--color-white) !important;
+  border: 2px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  min-height: 50px !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.rs__control:hover,
+[class*="rs__control"]:hover {
+  border-color: var(--color-forest-green) !important;
+}
+
+/* Value container wrapper - NO border */
+.value-container {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Inner value container - NO border */
+.rs__value-container,
+[class*="rs__value-container"] {
+  border: none !important;
+  background: transparent !important;
+  padding: 8px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Single value display */
+.rs__single-value,
+[class*="single-value"],
+[class*="singleValue"] {
+  color: var(--color-text) !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+}
+
+/* Indicators container - NO border */
+.rs__indicators {
+  border: none !important;
+  background: transparent !important;
+  padding-right: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Hide the separator line */
+.rs__indicator-separator,
+[class*="indicator-separator"],
+[class*="indicatorSeparator"] {
+  display: none !important;
+}
+
+/* Clear indicator - NO border */
+.clear-indicator {
+  border: none !important;
+  background: transparent !important;
+  padding: 8px !important;
+  cursor: pointer !important;
+}
+
+.clear-indicator__icon,
+.clear-indicator svg,
+.icon--x {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Dropdown indicator BUTTON - NO border, transparent background */
+button.dropdown-indicator,
+.dropdown-indicator {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 8px 12px !important;
+  color: var(--color-text) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+/* SVG icons - proper size and visible */
+.dropdown-indicator__icon,
+.dropdown-indicator svg,
+.icon--chevron,
+[class*="dropdown-indicator"] svg {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+  display: block !important;
+}
+
+/* Make control position relative for dropdown positioning */
+.rs__control,
+[class*="rs__control"] {
+  position: relative !important;
+}
+
+/* The actual clickable select control */
+[class*="rs__control"],
+[class*="select__control"],
+.rs__control {
+  font-family: 'Manrope', sans-serif !important;
+  background-color: var(--color-white) !important;
+  border: 2px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  min-height: 50px !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+[class*="rs__control"]:hover,
+[class*="select__control"]:hover,
+.rs__control:hover {
+  border-color: var(--color-forest-green) !important;
+}
+
+[class*="rs__control--is-focused"],
+[class*="select__control--is-focused"],
+.rs__control--is-focused {
+  border-color: var(--color-forest-green) !important;
+  box-shadow: 0 0 0 4px rgba(27, 61, 47, 0.1) !important;
+}
+
+/* Value container */
+[class*="rs__value-container"],
+[class*="select__value-container"],
+.rs__value-container {
+  padding: 8px 16px !important;
+  color: var(--color-text) !important;
+  font-family: 'Manrope', sans-serif !important;
+}
+
+[class*="rs__single-value"],
+[class*="select__single-value"],
+.rs__single-value {
+  color: var(--color-text) !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 16px !important;
+}
+
+/* Dropdown indicator - show only ONE chevron */
+[class*="rs__indicators"],
+[class*="select__indicators"],
+.rs__indicators {
+  padding-right: 8px !important;
+}
+
+[class*="rs__indicator-separator"],
+[class*="select__indicator-separator"],
+.rs__indicator-separator {
+  display: none !important;
+}
+
+[class*="rs__dropdown-indicator"],
+[class*="select__dropdown-indicator"],
+.rs__dropdown-indicator {
+  padding: 8px !important;
+  color: var(--color-text) !important;
+}
+
+[class*="rs__dropdown-indicator"] svg,
+[class*="select__dropdown-indicator"] svg,
+.rs__dropdown-indicator svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Hide duplicate/extra SVG icons that appear in nested wrappers */
+[class*="select__field"] > div > svg,
+[class*="SelectInput"] > svg,
+[class*="field-type"] > [class*="select"] > svg:not([class*="dropdown-indicator"] svg) {
+  display: none !important;
+}
+
+/* Dropdown Menu */
+[class*="rs__menu"],
+[class*="select__menu"],
+.rs__menu {
+  background-color: var(--color-white) !important;
+  border: 2px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(27, 61, 47, 0.12) !important;
+  margin-top: 8px !important;
+  overflow: hidden !important;
+  z-index: 9999 !important;
+}
+
+[class*="rs__menu-list"],
+[class*="select__menu-list"],
+.rs__menu-list {
+  padding: 8px !important;
+}
+
+[class*="rs__option"],
+[class*="select__option"],
+.rs__option {
+  font-family: 'Manrope', sans-serif !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  color: var(--color-text) !important;
+  background: transparent !important;
+}
+
+[class*="rs__option"]:hover,
+[class*="select__option"]:hover,
+.rs__option:hover {
+  background-color: var(--color-cream) !important;
+}
+
+[class*="rs__option--is-selected"],
+[class*="select__option--is-selected"],
+.rs__option--is-selected {
+  background-color: var(--color-forest-green) !important;
+  color: white !important;
+}
+
+[class*="rs__option--is-focused"],
+[class*="select__option--is-focused"],
+.rs__option--is-focused {
+  background-color: var(--color-cream) !important;
+}
+
+/* Popup container */
+[class*="popup"],
+[class*="listbox"] {
+  background-color: var(--color-white) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(27, 61, 47, 0.12) !important;
+}
+
+/* Combobox input styling */
+[role="combobox"] {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  outline: none !important;
+}
+
+/* Input within combobox */
+[class*="rs__input"],
+[class*="select__input"],
+.rs__input {
+  font-family: 'Manrope', sans-serif !important;
+  color: var(--color-text) !important;
+}
+
+[class*="rs__input"] input,
+[class*="select__input"] input,
+.rs__input input {
+  font-family: 'Manrope', sans-serif !important;
+  color: var(--color-text) !important;
+}
+
+/* ===== AGGRESSIVE SVG SIZE FIXES ===== */
+/* Force ALL SVGs in the form to be reasonable size */
+form svg,
+.field-type svg,
+[class*="field"] svg {
+  max-width: 24px !important;
+  max-height: 24px !important;
+}
+
+/* Specifically target dropdown indicator SVGs */
+[class*="indicator"] svg,
+[class*="Indicator"] svg,
+[class*="dropdown"] svg,
+[class*="Dropdown"] svg,
+[class*="chevron"] svg,
+[class*="Chevron"] svg,
+[class*="arrow"] svg,
+[class*="Arrow"] svg {
+  width: 16px !important;
+  height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+}
+
+/* Remove any inline styles that might be causing issues */
+[class*="select"] [style*="width"],
+[class*="Select"] [style*="width"] {
+  width: auto !important;
+}
+
+/* Fix any wrapper divs with borders inside select */
+[class*="select__field"] > div,
+[class*="SelectInput"] > div,
+[class*="select-input"] > div {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Only the actual control should have a border */
+[class*="__control"] {
+  border: 2px solid var(--color-border) !important;
+  border-radius: 12px !important;
+}
+
+/* Ensure SVG paths are properly styled */
+.dropdown-indicator path,
+.dropdown-indicator polygon,
+.icon--chevron path,
+.icon--chevron polygon {
+  stroke: var(--color-text) !important;
+  fill: none !important;
+}
+
+/* Radio/Checkbox buttons for Role selection */
+[class*="radio"],
+[class*="Radio"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+[class*="radio"] label,
+[class*="Radio"] label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 16px 20px !important;
+  background: var(--color-cream) !important;
+  border: 2px solid var(--color-border) !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  margin-bottom: 0 !important;
+}
+
+[class*="radio"] label:hover,
+[class*="Radio"] label:hover {
+  border-color: var(--color-forest-green) !important;
+}
+
+[class*="radio"] input:checked + label,
+[class*="Radio"] input:checked + label,
+[class*="radio"] label:has(input:checked),
+[class*="Radio"] label:has(input:checked) {
+  background: var(--color-forest-green) !important;
+  border-color: var(--color-forest-green) !important;
+  color: white !important;
+}
+
+/* Primary Button (Create) */
+button[type="submit"],
+button.btn--style-primary,
+[class*="submit"],
+.btn {
+  font-family: 'Manrope', sans-serif !important;
+  width: 100% !important;
+  padding: 16px 32px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--color-white) !important;
+  background-color: var(--color-forest-green) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  margin-top: 16px !important;
+  text-transform: none !important;
+}
+
+button[type="submit"]:hover,
+button.btn--style-primary:hover,
+.btn:hover {
+  background-color: var(--color-forest-dark) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(27, 61, 47, 0.2) !important;
+}
+
+/* Secondary Buttons */
+button:not([type="submit"]),
+button.btn--style-secondary {
+  background-color: transparent !important;
+  color: var(--color-forest-green) !important;
+  border: 2px solid var(--color-forest-green) !important;
+}
+
+button:not([type="submit"]):hover,
+button.btn--style-secondary:hover {
+  background-color: var(--color-cream) !important;
+}
+
+/* Links */
+a {
+  color: var(--color-forest-green) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+a:hover {
+  color: var(--color-accent-green) !important;
+}
+
+/* Messages/Alerts */
+[class*="error"],
+[class*="Error"] {
+  color: #DC2626 !important;
+  font-size: 14px !important;
+  margin-top: 8px !important;
+}
+
+[class*="success"],
+[class*="Success"] {
+  color: #16A34A !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-forest-dark);
+}
+
+/* Dashboard Styles (after login) */
+nav,
+[class*="nav"],
+aside,
+[class*="sidebar"] {
+  background-color: var(--color-forest-green) !important;
+}
+
+nav a,
+[class*="nav"] a,
+aside a,
+[class*="sidebar"] a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+nav a:hover,
+[class*="nav"] a:hover,
+aside a:hover,
+[class*="sidebar"] a:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+/* Table Styles */
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background: var(--color-white) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(27, 61, 47, 0.05) !important;
+}
+
+th {
+  background-color: var(--color-cream) !important;
+  color: var(--color-forest-dark) !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 16px 20px !important;
+  text-align: left !important;
+  border-bottom: 2px solid var(--color-border) !important;
+}
+
+td {
+  padding: 16px 20px !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+
+tr:hover td {
+  background-color: var(--color-cream) !important;
+}
+
+/* Badges/Pills */
+[class*="pill"],
+[class*="badge"],
+[class*="tag"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px 14px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  background-color: var(--color-accent-green) !important;
+  color: var(--color-forest-dark) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .template-minimal > div,
+  .template-default > div,
+  form {
+    padding: 32px 24px !important;
+    margin: 16px !important;
+    border-radius: 20px !important;
+  }
+
+  input, textarea, select {
+    padding: 12px 16px !important;
+  }
+
+  button[type="submit"] {
+    padding: 14px 28px !important;
+  }
+}

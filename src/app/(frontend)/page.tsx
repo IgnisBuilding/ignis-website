@@ -1,0 +1,41 @@
+import { HeroSection } from '@/components/sections/HeroSection'
+import { FeatureStrip } from '@/components/sections/FeatureStrip'
+
+const features = [
+  {
+    icon: 'sensors',
+    title: 'Predictive Detection',
+    description: 'Detects threats before escalation.',
+  },
+  {
+    icon: 'hub',
+    title: 'Smart Routing',
+    description: 'Real-time evacuation guidance.',
+  },
+  {
+    icon: 'analytics',
+    title: 'Emergency Insights',
+    description: 'Data for responders & authorities.',
+  },
+]
+
+export default function HomePage() {
+  return (
+    <>
+      <HeroSection
+        badge="Live AI Fire Intelligence"
+        title={
+          <>
+            Smart Fire Detection <br />
+            Meets <span className="text-forest-green">Intelligent</span> <br />
+            Evacuation
+          </>
+        }
+        description="An AI-powered fire detection and evacuation system designed to save lives when every second matters."
+        primaryCta={{ label: 'View Live Demo', href: '/contact' }}
+        secondaryCta={{ label: 'Explore Architecture', href: '/architecture' }}
+      />
+      <FeatureStrip features={features} />
+    </>
+  )
+}
