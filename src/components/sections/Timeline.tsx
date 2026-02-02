@@ -49,7 +49,7 @@ export function Timeline({
               >
                 {/* Year indicator - shown on opposite side on desktop */}
                 <div className={`hidden md:flex items-start ${isLeft ? 'order-2 justify-start pl-12' : 'order-1 justify-end pr-12'}`}>
-                  <span className="text-6xl lg:text-7xl font-extrabold text-forest-green/10 leading-none">
+                  <span className={`text-6xl lg:text-7xl font-extrabold leading-none ${isLast ? 'text-forest-green/40' : 'text-forest-green/10'}`}>
                     {event.year}
                   </span>
                 </div>
@@ -57,7 +57,7 @@ export function Timeline({
                 {/* Content card */}
                 <div className={`relative pl-12 md:pl-0 ${isLeft ? 'order-1 md:pr-12' : 'order-2 md:pl-12'}`}>
                   {/* Mobile year */}
-                  <span className="text-4xl font-extrabold text-forest-green/10 mb-2 block md:hidden">
+                  <span className={`text-4xl font-extrabold mb-2 block md:hidden ${isLast ? 'text-forest-green/40' : 'text-forest-green/10'}`}>
                     {event.year}
                   </span>
 
