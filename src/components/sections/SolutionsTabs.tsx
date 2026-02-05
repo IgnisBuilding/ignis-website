@@ -113,16 +113,16 @@ export function SolutionsTabs() {
             </div>
 
             {/* Problem */}
-            <div className="mb-6">
-              <p className="text-xs font-bold text-red-500/70 uppercase tracking-wider mb-2">The Challenge</p>
-              <p className="text-forest-dark/60 leading-relaxed">
+            <div className="mb-6 p-4 bg-forest-dark/5 rounded-xl border-l-2 border-forest-dark/20">
+              <p className="text-xs font-semibold text-forest-dark/50 uppercase tracking-wider mb-2">The Challenge</p>
+              <p className="text-forest-dark/70 leading-relaxed">
                 {activeSolution.problem}
               </p>
             </div>
 
             {/* Solution */}
-            <div className="mb-8">
-              <p className="text-xs font-bold text-accent-green uppercase tracking-wider mb-2">IGNIS Solution</p>
+            <div className="mb-8 p-4 bg-forest-green/5 rounded-xl border-l-2 border-forest-green">
+              <p className="text-xs font-semibold text-forest-green uppercase tracking-wider mb-2">How IGNIS Helps</p>
               <p className="text-forest-dark/80 leading-relaxed">
                 {activeSolution.solution}
               </p>
