@@ -63,7 +63,7 @@ export default function SolutionsPage() {
       {/* Real Incidents - Center Timeline Design */}
       <section className="w-full max-w-[1280px] px-6 lg:px-10 py-20">
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-accent-green mb-4">Why This Matters</p>
+          <p className="text-sm font-semibold text-forest-green uppercase tracking-wider mb-4">Why This Matters</p>
           <h2 className="text-4xl lg:text-5xl font-extrabold text-forest-dark tracking-tight mb-6">Every Fire Has a Story</h2>
           <p className="text-lg text-forest-dark/50 max-w-2xl mx-auto">Real tragedies from Pakistan that could have ended differently with intelligent fire safety.</p>
         </div>
@@ -126,12 +126,12 @@ export default function SolutionsPage() {
                   {/* Right Side - IGNIS Solution */}
                   <div className={`${index % 2 === 0 ? 'lg:pl-16' : 'lg:order-1 lg:pr-16 lg:text-right'}`}>
                     <div className={`lg:pt-12`}>
-                      <div className={`bg-forest-green/5 rounded-2xl p-6 border-l-4 lg:border-l-0 ${index % 2 === 0 ? 'lg:border-l-4' : 'lg:border-r-4'} border-forest-green`}>
+                      <div className={`bg-forest-green rounded-2xl p-6`}>
                         <div className={`flex gap-3 ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}>
-                          <span className="material-symbols-outlined text-forest-green text-xl flex-shrink-0">lightbulb</span>
+                          <span className="material-symbols-outlined text-white text-xl flex-shrink-0">lightbulb</span>
                           <div>
-                            <p className="text-xs font-semibold text-forest-green uppercase tracking-wider mb-2">With IGNIS</p>
-                            <p className="text-forest-dark/70 text-sm leading-relaxed">{incident.lesson}</p>
+                            <p className="text-xs font-semibold text-white/80 uppercase tracking-wider mb-2">With IGNIS</p>
+                            <p className="text-white/90 text-sm leading-relaxed">{incident.lesson}</p>
                           </div>
                         </div>
                       </div>

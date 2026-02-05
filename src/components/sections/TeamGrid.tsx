@@ -31,7 +31,7 @@ export function TeamGrid({ title = 'Meet the Team', subtitle, members }: TeamGri
                     alt={member.name}
                     width={96}
                     height={96}
-                    className="size-full object-cover"
+                    className="size-full object-cover object-top"
                   />
                 ) : (
                   <span className="material-symbols-outlined text-accent-green text-3xl">person</span>

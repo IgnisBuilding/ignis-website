@@ -129,10 +129,10 @@ export function SolutionsTabs() {
             </div>
 
             {/* Market Size */}
-            <div className="p-4 bg-cream rounded-2xl">
+            <div className="p-4 bg-forest-green rounded-2xl">
               <div className="text-center">
-                <p className="text-3xl font-bold text-forest-green">{activeSolution.stats.market}</p>
-                <p className="text-sm text-forest-dark/50">{activeSolution.stats.marketLabel}</p>
+                <p className="text-3xl font-bold text-white">{activeSolution.stats.market}</p>
+                <p className="text-sm text-white/70">{activeSolution.stats.marketLabel}</p>
               </div>
             </div>
           </div>

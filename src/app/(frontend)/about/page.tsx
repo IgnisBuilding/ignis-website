@@ -40,7 +40,7 @@ const tractionEvents = [
   {
     year: '2025',
     title: 'IoBM Competition',
-    description: 'Competed in IoBM Startup Competition. Validated fire safety problem and refined our solution concept.',
+    description: 'Competed in IoBM Startup Competition. Validated fire safety problem and refined idea.',
     position: 'left' as const,
   },
   {
@@ -51,14 +51,14 @@ const tractionEvents = [
   },
   {
     year: '2026',
-    title: 'Product Development',
-    description: 'Built complete platform with real-time fire detection, dynamic evacuation routing, and rescue team support.',
+    title: 'Development Stage',
+    description: 'Real-time fire detection, dynamic and voice-guided evacuation routing, firefighter intelligence.',
     position: 'left' as const,
   },
   {
     year: '2026',
-    title: 'NIC Karachi & Ignite',
-    description: 'Applying to National Incubation Center (NIC Karachi) funded by Ignite, MoITT to scale Pakistan\'s first AI-powered fire safety system.',
+    title: 'Now - NIC Karachi',
+    description: 'Applying to NIC to scale Pakistan\'s first AI-powered intelligent fire safety system.',
     position: 'right' as const,
   },
 ]
@@ -67,7 +67,7 @@ const visionPoints = [
   {
     icon: 'check_circle',
     title: 'Why We Exist',
-    description: 'To identify gaps in current fire safety systems and prevent avoidable deaths through intelligent technology.',
+    description: 'Identify gaps and opportunities in current fire safety systems to prevent avoidable deaths.',
   },
   {
     icon: 'visibility',
@@ -80,9 +80,14 @@ const visionPoints = [
     description: 'Shifting fire safety from passive alarms to intelligent systems with detection, guidance, and rescue intelligence.',
   },
   {
+    icon: 'build',
+    title: 'Our Innovation',
+    description: 'Deploy AI detection, anti-spoofing, indoor positioning, and voice navigation across Pakistan.',
+  },
+  {
     icon: 'public',
     title: 'Global Impact',
-    description: 'Making intelligent fire safety the standard across South Asia with measurable results and saved lives.',
+    description: 'Measurable results and saved lives through intelligent fire safety becoming the standard across South Asia.',
   },
 ]
 
@@ -90,17 +95,17 @@ const problems = [
   {
     icon: 'warning',
     title: 'Panic & Confusion',
-    description: 'People panic during fires and are unfamiliar with building layouts, exit locations, and safe evacuation routes.',
+    description: 'People panic during fires and are unfamiliar with building layouts, exit locations, and safe evacuation routes, leading to confusion and deadly delays.',
   },
   {
     icon: 'location_off',
     title: 'No Real-Time Information',
-    description: 'Lack of real-time information about fire\'s exact location causes chaotic evacuations where occupants move toward danger.',
+    description: 'Lack of real-time information about fire\'s exact location causes chaotic evacuations where occupants unknowingly move toward danger instead of safety.',
   },
   {
     icon: 'local_fire_department',
     title: 'Blind Rescue Operations',
-    description: 'Firefighters arrive without knowing precise fire location or where occupants are trapped, forcing blind searches.',
+    description: 'Firefighters arrive without knowing precise fire location or where occupants are trapped, forcing blind searches that risk lives and waste precious time.',
   },
 ]
 
@@ -122,7 +127,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-extrabold text-white mb-4">Why Traditional Systems Fail</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
               Fire-related incidents cause significant loss of life and property in Pakistan.
-              The critical challenge is not just detection, but effective evacuation and response.
+              The critical challenge is not just detection, but effective evacuation and response where panic, unfamiliarity with layouts, and lack of real-time fire location data cost lives.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -145,7 +150,7 @@ export default function AboutPage() {
           <p className="text-accent-green text-sm font-semibold uppercase tracking-wider mb-3">Our Vision</p>
           <h2 className="text-3xl font-extrabold text-forest-dark mb-4">Where Detection Meets Action</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {visionPoints.map((point) => (
             <div key={point.title} className="bg-white rounded-xl p-6 border border-forest-green/20 hover:border-forest-green/40 transition-colors">
               <div className="size-10 rounded-full bg-forest-green/10 flex items-center justify-center mb-4">

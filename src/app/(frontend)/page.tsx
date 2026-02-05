@@ -25,12 +25,12 @@ export default function HomePage() {
       <HeroSection
         title={
           <>
-            Smart Fire Detection <br />
-            Meets <span className="text-forest-green">Intelligent</span> <br />
-            Evacuation
+            When Fire Strikes, <br />
+            <span className="text-forest-green">We Guide You</span> <br />
+            To Safety
           </>
         }
-        description="An AI-powered fire detection and evacuation system designed to save lives when every second matters."
+        description="AI-powered voice navigation and real-time evacuation guidance that turns panic into action—because knowing the way out saves lives."
         primaryCta={{ label: 'Request Demo', href: '/contact' }}
         secondaryCta={{ label: 'View Solutions', href: '/solutions' }}
         imageUrl="/img1.jpeg"
