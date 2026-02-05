@@ -8,12 +8,12 @@ const solutions = [
     icon: 'home',
     tab: 'Residential',
     title: 'Residential Buildings',
-    description: 'Homes, apartments, and housing complexes need reliable fire protection that safeguards families. IGNIS provides intelligent monitoring with instant alerts and clear evacuation guidance for residents.',
+    problem: 'Families panic during fires, unfamiliar with building layouts and unable to find safe exits in smoke-filled corridors—especially at night when most fatal fires occur.',
+    solution: 'IGNIS provides intelligent fire detection with voice-guided evacuation, helping every family member navigate to safety even in zero visibility conditions.',
     features: [
-      { icon: 'videocam', title: 'AI Fire Detection', description: 'Camera-based fire detection with anti-spoofing to distinguish real fires from screens' },
-      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided turn-by-turn directions to the nearest safe exit' },
-      { icon: 'my_location', title: 'Indoor Positioning', description: 'WiFi-based tracking to locate occupants in real-time' },
-      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Real-time view of fire location and occupant positions for responders' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Camera-based detection with anti-spoofing distinguishes real fires from TV screens, eliminating false alarms' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Turn-by-turn voice guidance directs each resident to the nearest safe exit' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'WiFi-based tracking locates family members in real-time during emergencies' },
     ],
     stats: { market: '75,000+', marketLabel: 'Buildings in Pakistan' }
   },
@@ -22,12 +22,12 @@ const solutions = [
     icon: 'apartment',
     tab: 'Commercial',
     title: 'Commercial Buildings',
-    description: 'Office complexes, shopping centers, and business facilities with high occupancy require intelligent fire detection and evacuation systems that can handle complex layouts.',
+    problem: 'Shopping malls and offices have thousands of visitors unfamiliar with exit locations. During fires, crowds create dangerous bottlenecks and people move toward danger without knowing fire location.',
+    solution: 'IGNIS detects fires instantly and guides each person through personalized voice navigation, preventing crowd crushes and directing everyone away from danger.',
     features: [
-      { icon: 'videocam', title: 'AI Fire Detection', description: 'Camera-based fire detection with anti-spoofing to eliminate false alarms' },
-      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided evacuation directing each person to the nearest safe exit' },
-      { icon: 'my_location', title: 'Indoor Positioning', description: 'Real-time occupant tracking across multiple floors' },
-      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Emergency screen showing exact fire location and all occupant positions' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Real-time visual detection across camera feeds with false alarm prevention' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Personalized evacuation guidance directing each person to the nearest safe exit' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Track occupant locations across multiple floors for coordinated evacuation' },
     ],
     stats: { market: '11,000+', marketLabel: 'Malls in Pakistan' }
   },
@@ -36,12 +36,12 @@ const solutions = [
     icon: 'school',
     tab: 'Educational',
     title: 'Educational Institutions',
-    description: 'Schools and universities require safety systems that protect students and staff while enabling organized evacuation procedures during emergencies.',
+    problem: 'Schools house hundreds of children who panic easily. Teachers struggle to account for all students during chaotic evacuations, and visitors are unfamiliar with emergency exits.',
+    solution: 'IGNIS provides clear voice guidance for organized evacuation while tracking student locations, ensuring no child is left behind.',
     features: [
-      { icon: 'videocam', title: 'AI Fire Detection', description: 'Visual fire detection through camera feeds with false alarm prevention' },
-      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Clear voice guidance directing students and staff to safe exits' },
-      { icon: 'my_location', title: 'Indoor Positioning', description: 'Track occupant locations to ensure everyone evacuates safely' },
-      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Real-time emergency view for rescue teams to locate anyone trapped' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Intelligent detection through existing camera infrastructure with instant alerts' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Clear voice commands guide students and staff to designated assembly points' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Real-time location tracking ensures all students are accounted for during evacuation' },
     ],
     stats: { market: '278,000+', marketLabel: 'Institutions in Pakistan' }
   },
@@ -50,12 +50,12 @@ const solutions = [
     icon: 'local_hospital',
     tab: 'Healthcare',
     title: 'Healthcare Facilities',
-    description: 'Hospitals and clinics face unique challenges with patients who may have limited mobility and the need for continuous operation during emergencies.',
+    problem: 'Hospitals have patients with limited mobility, critical equipment that cannot be abandoned, and complex layouts. Traditional alarms cause panic without providing actionable guidance.',
+    solution: 'IGNIS enables coordinated evacuation with priority routing for patient areas while tracking everyone\'s location for efficient rescue operations.',
     features: [
-      { icon: 'videocam', title: 'AI Fire Detection', description: 'Intelligent fire detection that eliminates false alarms from medical equipment' },
-      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided evacuation with priority routing for patient areas' },
-      { icon: 'my_location', title: 'Indoor Positioning', description: 'Track patients and staff locations for coordinated evacuation' },
-      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Real-time view showing fire spread and occupant positions for targeted rescue' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Smart detection that minimizes false alarms from medical equipment and steam' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Calm voice guidance with priority routing for patient wards and critical areas' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Track patients, staff, and visitors for coordinated evacuation and rescue' },
     ],
     stats: { market: '1,900+', marketLabel: 'Hospitals in Pakistan' }
   },
@@ -64,12 +64,12 @@ const solutions = [
     icon: 'factory',
     tab: 'Industrial',
     title: 'Industrial Sites',
-    description: 'Manufacturing plants and warehouses require specialized detection systems and evacuation guidance that accounts for complex facility layouts.',
+    problem: 'Factories have complex layouts, high noise levels, and workers spread across large areas. Traditional sirens don\'t indicate fire location or safe evacuation routes.',
+    solution: 'IGNIS cuts through industrial noise with personalized voice guidance, directing each worker to safety while tracking everyone\'s location.',
     features: [
-      { icon: 'videocam', title: 'AI Fire Detection', description: 'Camera-based detection optimized for industrial environments' },
-      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided evacuation directing workers to nearest safe exits' },
-      { icon: 'my_location', title: 'Indoor Positioning', description: 'Real-time location tracking for all personnel on site' },
-      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Emergency dashboard showing fire location and worker positions' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Visual detection optimized for industrial environments with heat and dust' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Clear voice directions that cut through factory noise to guide workers to exits' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Real-time tracking of all personnel across the facility' },
     ],
     stats: { market: '3,200+', marketLabel: 'Plants in Pakistan' }
   },
@@ -112,12 +112,24 @@ export function SolutionsTabs() {
               <h3 className="text-2xl lg:text-3xl font-bold text-forest-dark">{activeSolution.title}</h3>
             </div>
 
-            <p className="text-forest-dark/60 leading-relaxed mb-8">
-              {activeSolution.description}
-            </p>
+            {/* Problem */}
+            <div className="mb-6">
+              <p className="text-xs font-bold text-red-500/70 uppercase tracking-wider mb-2">The Challenge</p>
+              <p className="text-forest-dark/60 leading-relaxed">
+                {activeSolution.problem}
+              </p>
+            </div>
+
+            {/* Solution */}
+            <div className="mb-8">
+              <p className="text-xs font-bold text-accent-green uppercase tracking-wider mb-2">IGNIS Solution</p>
+              <p className="text-forest-dark/80 leading-relaxed">
+                {activeSolution.solution}
+              </p>
+            </div>
 
             {/* Market Size */}
-            <div className="p-4 bg-cream rounded-2xl mb-8">
+            <div className="p-4 bg-cream rounded-2xl">
               <div className="text-center">
                 <p className="text-3xl font-bold text-forest-green">{activeSolution.stats.market}</p>
                 <p className="text-sm text-forest-dark/50">{activeSolution.stats.marketLabel}</p>
@@ -127,7 +139,7 @@ export function SolutionsTabs() {
 
           {/* Right - Features */}
           <div className="bg-cream/50 p-8 lg:p-12">
-            <h4 className="text-sm font-bold text-forest-dark/40 uppercase tracking-wider mb-6">Key Features</h4>
+            <h4 className="text-sm font-bold text-forest-dark/40 uppercase tracking-wider mb-6">Key Capabilities</h4>
             <div className="space-y-4">
               {activeSolution.features.map((feature) => (
                 <div
@@ -143,6 +155,17 @@ export function SolutionsTabs() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Rescue Team Note */}
+            <div className="mt-6 p-4 bg-forest-dark/5 rounded-xl border border-forest-dark/10">
+              <div className="flex gap-3">
+                <span className="material-symbols-outlined text-forest-green">local_fire_department</span>
+                <div>
+                  <p className="text-sm font-semibold text-forest-dark">Rescue Team Support</p>
+                  <p className="text-xs text-forest-dark/60">Firefighters and rescue headquarters receive real-time dashboards showing exact fire location and all occupant positions for targeted rescue operations.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
