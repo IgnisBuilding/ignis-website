@@ -58,13 +58,16 @@ export function HeroSection({
           )}
 
           <div className="pt-8 border-t border-forest-dark/10 mt-2">
-            <p className="text-sm font-semibold text-forest-dark/60 mb-4">The Future of Emergency Response</p>
-            <div className="flex items-center gap-6">
-              <span className="text-lg font-sans font-bold tracking-tight text-forest-green">AI-Powered</span>
-              <span className="text-lg font-sans font-black tracking-tighter text-forest-dark/70">Real-Time</span>
-              <span className="text-lg font-serif italic font-bold text-forest-dark/70">Life-Saving</span>
-              <span className="hidden sm:block text-lg font-sans font-bold tracking-widest uppercase text-xs text-accent-green">First Response</span>
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-2xl">🇵🇰</span>
+              <p className="text-sm font-bold text-forest-green uppercase tracking-wide">Pakistan's First</p>
             </div>
+            <p className="text-lg font-semibold text-forest-dark/80">
+              AI-Powered Fire Emergency Response Platform
+            </p>
+            <p className="text-sm text-forest-dark/50 mt-2">
+              Revolutionizing fire safety with intelligent detection & smart evacuation
+            </p>
           </div>
         </div>
 
