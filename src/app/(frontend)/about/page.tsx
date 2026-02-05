@@ -6,32 +6,32 @@ import { PageHero } from '@/components/sections/PageHero'
 
 export const metadata: Metadata = {
   title: 'About IGNIS - Our Mission & Team',
-  description: 'Learn about IGNIS, an AI-powered fire detection system developed as a Final Year Project at FAST-NUCES Karachi.',
+  description: 'Learn about IGNIS, Pakistan\'s first AI-powered fire detection and smart evacuation platform.',
 }
 
 const teamMembers = [
   {
     name: 'Mohammad Irtiza',
-    role: 'Project Lead',
-    description: 'Full-stack development & system architecture',
+    role: 'CEO & Co-Founder',
+    description: 'Product vision & system architecture',
     image: '/irtiza.jpeg',
   },
   {
     name: 'Ali Raza',
-    role: 'Full Stack Developer',
-    description: 'Frontend & backend development',
+    role: 'CTO & Co-Founder',
+    description: 'Technology & platform development',
     image: '/aliraza.jpeg',
   },
   {
     name: 'Ahmed Haque',
-    role: 'Full Stack Developer',
-    description: 'Frontend & backend development',
+    role: 'Lead Engineer',
+    description: 'AI systems & integration',
     image: '/ahmed.jpeg',
   },
   {
     name: 'Dr. Farrukh Shahid',
-    role: 'Faculty Advisor',
-    description: 'Research guidance & academic supervision',
+    role: 'Technical Advisor',
+    description: 'Strategic guidance & research',
     image: '/Dr_farrukh.jpeg',
   },
 ]
@@ -39,26 +39,26 @@ const teamMembers = [
 const timelineEvents = [
   {
     year: '2025',
-    title: 'Research & Planning',
-    description: 'Initial research phase covering literature review, feasibility analysis, and system architecture design for AI-powered fire detection.',
+    title: 'Ideation & Research',
+    description: 'Identified the gap in traditional fire safety systems and began developing our AI-powered solution concept.',
     position: 'left' as const,
   },
   {
     year: '2025',
-    title: 'AI Model Development',
-    description: 'Training and optimizing neural networks for real-time fire and smoke detection using computer vision and thermal imaging data.',
+    title: 'Product Development',
+    description: 'Built and trained proprietary AI models for real-time fire detection with industry-leading accuracy.',
     position: 'right' as const,
   },
   {
     year: '2026',
-    title: 'System Integration',
-    description: 'Integrating AI detection models with intelligent evacuation routing algorithms and real-time sensor network communication.',
+    title: 'Platform Launch',
+    description: 'Launched complete platform with AI detection, smart evacuation routing, and real-time monitoring dashboard.',
     position: 'left' as const,
   },
   {
     year: '2026',
-    title: 'Testing & Deployment',
-    description: 'Comprehensive system testing, performance benchmarking, documentation, and final project presentation at FAST-NUCES.',
+    title: 'Market Expansion',
+    description: 'Partnering with residential complexes, commercial buildings, and institutions across Pakistan.',
     position: 'right' as const,
   },
 ]
@@ -98,7 +98,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="Building a Safer Tomorrow"
-        description="IGNIS is an AI-powered fire detection and intelligent evacuation system, developed as a Final Year Project at FAST-NUCES Karachi."
+        description="IGNIS is Pakistan's first AI-powered fire detection and intelligent evacuation platform, designed to protect lives when every second matters."
       >
         <p className="text-forest-green font-semibold text-xl mt-4">Detect Fast. Evacuate Smart. Save Lives.</p>
       </PageHero>
@@ -149,21 +149,20 @@ export default function AboutPage() {
         events={timelineEvents}
       />
 
-      {/* Institution */}
+      {/* CTA */}
       <section className="w-full max-w-[1280px] px-6 lg:px-10 py-16">
         <div className="bg-forest-dark rounded-3xl p-8 lg:p-12 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Academic Project</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">Partner With Us</h2>
           <p className="text-white/70 max-w-2xl mx-auto mb-6">
-            IGNIS is developed as a Final Year Project (FYP) at FAST-NUCES Karachi,
-            Pakistan during the 2025-2026 academic year. We are open to academic
-            collaboration and research partnerships.
+            We're building the future of fire safety in Pakistan. Whether you're a property developer,
+            building manager, or enterprise looking for advanced safety solutions — let's talk.
           </p>
           <div className="flex justify-center gap-4 text-white/40 text-sm">
-            <span>FAST-NUCES Karachi</span>
+            <span>Karachi, Pakistan</span>
             <span>•</span>
-            <span>Computer Science Department</span>
+            <span>Nationwide Coverage</span>
             <span>•</span>
-            <span>FYP 2025-2026</span>
+            <span>Enterprise Ready</span>
           </div>
         </div>
       </section>

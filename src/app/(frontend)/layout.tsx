@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer'
 export const metadata: Metadata = {
   title: 'IGNIS - Smart Fire Detection & Evacuation System',
   description: 'Detect Fast. Evacuate Smart. Save Lives. An AI-powered fire detection and evacuation system designed to save lives when every second matters.',
-  keywords: ['fire detection', 'AI', 'evacuation', 'smart building', 'safety', 'FAST-NUCES'],
+  keywords: ['fire detection', 'AI', 'evacuation', 'smart building', 'safety', 'Pakistan', 'fire safety'],
   authors: [{ name: 'IGNIS Team' }],
   openGraph: {
     title: 'IGNIS - Smart Fire Detection & Evacuation System',

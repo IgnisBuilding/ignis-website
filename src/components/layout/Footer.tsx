@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/Button'
 
 const navLinks = [
   { href: '/solutions', label: 'Solutions' },
-  { href: '/technology', label: 'Technology' },
+  // { href: '/technology', label: 'Technology' }, // Hidden - protect IP
   // { href: '/architecture', label: 'Architecture' }, // Hidden - technical details not for public
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
@@ -65,13 +65,13 @@ export function Footer() {
             <div className="flex flex-col items-center md:items-start">
               <h4 className="text-sm font-semibold text-white mb-5">Get in Touch</h4>
               <a
-                href="mailto:ignis.fyp@gmail.com"
+                href="mailto:contact@ignis.pk"
                 className="text-sm text-white hover:text-accent-green transition-colors mb-2"
               >
-                ignis.fyp@gmail.com
+                contact@ignis.pk
               </a>
-              <p className="text-sm text-white/80 mb-1">FAST-NUCES Karachi</p>
-              <p className="text-xs text-white/70 mb-6">Computer Science • FYP 2025-2026</p>
+              <p className="text-sm text-white/80 mb-1">Karachi, Pakistan</p>
+              <p className="text-xs text-white/70 mb-6">Smart Fire Safety Solutions</p>
               <Button href="/contact" variant="primary" size="sm">
                 Request Demo
               </Button>
@@ -85,7 +85,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-2 text-xs text-white/70">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-green"></span>
-              Built with passion at FAST-NUCES
+              Protecting lives with AI
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/Button'
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/solutions', label: 'Solutions' },
-  { href: '/technology', label: 'Technology' },
+  // { href: '/technology', label: 'Technology' }, // Hidden - protect IP
   // { href: '/architecture', label: 'Architecture' }, // Hidden - technical details not for public
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },

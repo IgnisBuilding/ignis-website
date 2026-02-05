@@ -9,20 +9,20 @@ export const metadata: Metadata = {
 
 const projectInfo = [
   {
-    title: 'Project Type',
-    items: ['Final Year Project', 'FAST-NUCES', '2025-2026'],
+    title: 'Solutions',
+    items: ['Residential', 'Commercial', 'Healthcare', 'Industrial'],
   },
   {
-    title: 'Domain',
-    items: ['AI Fire Detection', 'Evacuation Systems', 'Emergency Response'],
+    title: 'Capabilities',
+    items: ['AI Fire Detection', 'Smart Evacuation', 'Real-time Alerts'],
   },
   {
-    title: 'Status',
-    items: ['System Complete', 'Field Testing Phase', 'Demo Available'],
+    title: 'Availability',
+    items: ['Demo Available', 'Pilot Programs', 'Enterprise Solutions'],
   },
   {
-    title: 'Institution',
-    items: ['FAST-NUCES', 'Karachi, Pakistan', 'Open for Collaboration'],
+    title: 'Coverage',
+    items: ['Karachi, Pakistan', 'Nationwide Expansion', 'Partner Inquiries Welcome'],
   },
 ]
 
@@ -49,10 +49,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-sm font-bold text-forest-dark/50 uppercase tracking-wider mb-1">Inquiries</h3>
                     <a
-                      href="mailto:ignis.fyp@gmail.com"
+                      href="mailto:contact@ignis.pk"
                       className="text-xl font-semibold text-forest-dark hover:text-forest-green transition-colors"
                     >
-                      ignis.fyp@gmail.com
+                      contact@ignis.pk
                     </a>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
             {/* Project Information */}
             <div>
-              <h2 className="text-2xl font-bold text-forest-dark mb-8">Project Information</h2>
+              <h2 className="text-2xl font-bold text-forest-dark mb-8">Why Choose IGNIS</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {projectInfo.map((info) => (
                   <div key={info.title} className="space-y-2">
