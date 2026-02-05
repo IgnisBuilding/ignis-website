@@ -80,8 +80,6 @@ export function HeroSection({
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url("${imageUrl}")` }}
               />
-              <div className="absolute inset-0 bg-forest-dark/40 backdrop-contrast-125"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(23,207,115,0.1),transparent_70%)]"></div>
             </div>
           </div>
         )}
