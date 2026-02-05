@@ -49,10 +49,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-sm font-bold text-forest-dark/50 uppercase tracking-wider mb-1">Inquiries</h3>
                     <a
-                      href="mailto:contact@ignis.pk"
+                      href="mailto:contact.ignis.team@gmail.com"
                       className="text-xl font-semibold text-forest-dark hover:text-forest-green transition-colors"
                     >
-                      contact@ignis.pk
+                      contact.ignis.team@gmail.com
                     </a>
                   </div>
                 </div>

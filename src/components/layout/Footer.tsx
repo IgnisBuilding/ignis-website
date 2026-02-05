@@ -65,10 +65,10 @@ export function Footer() {
             <div className="flex flex-col items-center md:items-start">
               <h4 className="text-sm font-semibold text-white mb-5">Get in Touch</h4>
               <a
-                href="mailto:contact@ignis.pk"
+                href="mailto:contact.ignis.team@gmail.com"
                 className="text-sm text-white hover:text-accent-green transition-colors mb-2"
               >
-                contact@ignis.pk
+                contact.ignis.team@gmail.com
               </a>
               <p className="text-sm text-white/80 mb-1">Karachi, Pakistan</p>
               <p className="text-xs text-white/70 mb-6">Smart Fire Safety Solutions</p>
