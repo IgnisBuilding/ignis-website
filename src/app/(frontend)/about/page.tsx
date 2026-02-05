@@ -57,8 +57,8 @@ const timelineEvents = [
   },
   {
     year: '2026',
-    title: 'NIC Karachi Application',
-    description: 'Applying to National Incubation Center to scale Pakistan\'s first AI-powered intelligent fire safety system.',
+    title: 'NIC Karachi & Ignite',
+    description: 'Applying to National Incubation Center (NIC Karachi) funded by Ignite, MoITT to scale Pakistan\'s first AI-powered fire safety system.',
     position: 'right' as const,
   },
 ]
