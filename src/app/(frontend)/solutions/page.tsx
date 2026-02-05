@@ -8,54 +8,24 @@ export const metadata: Metadata = {
   description: 'Discover how IGNIS AI fire detection can be applied across different building types and scenarios.',
 }
 
-const benefits = [
-  {
-    icon: 'speed',
-    title: 'Faster Response',
-    value: '60%',
-    description: 'Reduction in detection-to-evacuation time compared to traditional systems.',
-  },
-  {
-    icon: 'group',
-    title: 'Safer Evacuations',
-    value: '40%',
-    description: 'Improvement in evacuation efficiency through dynamic routing.',
-  },
-  {
-    icon: 'savings',
-    title: 'Cost Effective',
-    value: '30%',
-    description: 'Lower operational costs through predictive maintenance.',
-  },
-  {
-    icon: 'eco',
-    title: 'False Alarm Reduction',
-    value: '90%',
-    description: 'Fewer unnecessary evacuations through AI verification.',
-  },
-]
-
 const useCases = [
   {
     scenario: 'Kitchen Fire Detection',
     icon: 'cooking',
     challenge: 'Traditional smoke detectors often trigger false alarms from cooking.',
     solution: 'IGNIS visual AI distinguishes between cooking smoke and actual fire conditions.',
-    impact: { value: '90%', label: 'Fewer false alarms' },
   },
   {
     scenario: 'Crowded Event Evacuation',
     icon: 'groups',
     challenge: 'Large crowds can create dangerous bottlenecks during evacuation.',
     solution: 'Dynamic routing distributes evacuees across multiple exits based on real-time density.',
-    impact: { value: '40%', label: 'Faster evacuation' },
   },
   {
     scenario: 'Multi-Building Complex',
     icon: 'domain',
     challenge: 'Fire in one building affects evacuation routes for connected structures.',
     solution: 'System-wide coordination adjusts routes across all buildings simultaneously.',
-    impact: { value: '100%', label: 'Cross-building sync' },
   },
 ]
 
@@ -70,25 +40,6 @@ export default function SolutionsPage() {
       {/* Solutions Tabs */}
       <section className="w-full max-w-[1280px] px-6 lg:px-10 pb-20">
         <SolutionsTabs />
-      </section>
-
-      {/* Benefits */}
-      <section className="w-full bg-forest-dark py-16">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
-          <h2 className="text-2xl font-bold text-white mb-12 text-center">Key Benefits</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit) => (
-              <div key={benefit.title} className="text-center">
-                <div className="size-14 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="material-symbols-outlined text-accent-green text-2xl">{benefit.icon}</span>
-                </div>
-                <p className="text-4xl font-extrabold text-accent-green mb-2">{benefit.value}</p>
-                <h3 className="font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-sm text-white/60">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Use Cases - Storytelling Design */}
@@ -134,16 +85,9 @@ export default function SolutionsPage() {
                   {/* The Solution - Story Resolution */}
                   <div className={`${index % 2 === 1 ? 'lg:order-1 lg:text-right' : 'lg:text-left'} md:pl-16 lg:pl-0`}>
                     <div className={`${index % 2 === 1 ? 'lg:mr-auto lg:ml-0' : ''} max-w-md`}>
-                      <div className="bg-forest-green/5 border-l-4 border-accent-green p-5 rounded-r-lg mb-6">
+                      <div className="bg-forest-green/5 border-l-4 border-accent-green p-5 rounded-r-lg">
                         <p className="text-xs font-bold text-accent-green uppercase tracking-wider mb-2">IGNIS Response</p>
                         <p className="text-forest-dark/70">{useCase.solution}</p>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="text-right">
-                          <p className="text-4xl font-black text-accent-green">{useCase.impact.value}</p>
-                          <p className="text-sm text-forest-dark/40">{useCase.impact.label}</p>
-                        </div>
-                        <div className="size-2 rounded-full bg-accent-green"></div>
                       </div>
                     </div>
                   </div>

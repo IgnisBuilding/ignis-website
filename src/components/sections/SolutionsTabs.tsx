@@ -15,7 +15,7 @@ const solutions = [
       { icon: 'smartphone', title: 'Mobile Alerts', description: 'Instant notifications to family members even when away from home' },
       { icon: 'map', title: 'Safe Exit Routes', description: 'Clear visual and audio guidance to the safest exit from any room' },
     ],
-    stats: { coverage: '10K+ homes', response: '<2s', accuracy: '99.4%' }
+    stats: { market: '75,000+', marketLabel: 'Buildings in Pakistan', response: '<2s', accuracy: '99.4%' }
   },
   {
     id: 'commercial',
@@ -29,7 +29,7 @@ const solutions = [
       { icon: 'groups', title: 'Crowd Analysis', description: 'AI-powered density monitoring to prevent dangerous bottlenecks' },
       { icon: 'notifications_active', title: 'Zone Alerts', description: 'Targeted notifications to specific building zones and tenants' },
     ],
-    stats: { coverage: '500K+ sq ft', response: '<2s', accuracy: '99.5%' }
+    stats: { market: '11,000+', marketLabel: 'Malls in Pakistan', response: '<2s', accuracy: '99.5%' }
   },
   {
     id: 'educational',
@@ -43,7 +43,7 @@ const solutions = [
       { icon: 'accessible', title: 'Accessibility Support', description: 'Special routing for students with mobility requirements' },
       { icon: 'lock', title: 'Lockdown Integration', description: 'Seamless coordination between fire and security systems' },
     ],
-    stats: { coverage: '200+ rooms', response: '<3s', accuracy: '99.2%' }
+    stats: { market: '278,000+', marketLabel: 'Institutions in Pakistan', response: '<3s', accuracy: '99.2%' }
   },
   {
     id: 'healthcare',
@@ -57,7 +57,7 @@ const solutions = [
       { icon: 'badge', title: 'Staff Coordination', description: 'Role-based alerts and responsibility assignment' },
       { icon: 'emergency', title: 'OR Protection', description: 'Special protocols for operating rooms and ICUs' },
     ],
-    stats: { coverage: '300+ beds', response: '<2s', accuracy: '99.8%' }
+    stats: { market: '1,900+', marketLabel: 'Hospitals in Pakistan', response: '<2s', accuracy: '99.8%' }
   },
   {
     id: 'industrial',
@@ -71,7 +71,7 @@ const solutions = [
       { icon: 'person_pin_circle', title: 'Worker Tracking', description: 'Real-time location tracking for all personnel' },
       { icon: 'air', title: 'Ventilation Control', description: 'Automated HVAC response to contain smoke spread' },
     ],
-    stats: { coverage: '1M+ sq ft', response: '<1.5s', accuracy: '99.9%' }
+    stats: { market: '3,200+', marketLabel: 'Plants in Pakistan', response: '<1.5s', accuracy: '99.9%' }
   },
 ]
 
@@ -119,8 +119,8 @@ export function SolutionsTabs() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 p-4 bg-cream rounded-2xl mb-8">
               <div className="text-center">
-                <p className="text-xl font-bold text-forest-green">{activeSolution.stats.coverage}</p>
-                <p className="text-xs text-forest-dark/50">Coverage</p>
+                <p className="text-xl font-bold text-forest-green">{activeSolution.stats.market}</p>
+                <p className="text-xs text-forest-dark/50">{activeSolution.stats.marketLabel}</p>
               </div>
               <div className="text-center border-x border-forest-green/10">
                 <p className="text-xl font-bold text-forest-green">{activeSolution.stats.response}</p>

@@ -30,19 +30,9 @@ export function Footer() {
                   className="h-[100px] w-auto"
                 />
               </Link>
-              <p className="text-white/80 text-sm leading-relaxed text-center md:text-left mb-6">
+              <p className="text-white/80 text-sm leading-relaxed text-center md:text-left">
                 AI-powered fire detection and intelligent evacuation system designed to save lives.
               </p>
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full">
-                  <span className="material-symbols-outlined text-accent-green text-sm">verified</span>
-                  <span className="text-xs text-white/80">99.2% Accuracy</span>
-                </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full">
-                  <span className="material-symbols-outlined text-accent-green text-sm">speed</span>
-                  <span className="text-xs text-white/80">&lt;3s Response</span>
-                </div>
-              </div>
             </div>
 
             {/* Column 2: Quick Links */}
