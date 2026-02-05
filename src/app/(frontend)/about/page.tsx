@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button'
 
 export const metadata: Metadata = {
   title: 'About IGNIS - Our Mission & Team',
-  description: 'Learn about IGNIS, Pakistan\'s first AI-powered fire detection and smart evacuation platform. Funded by Ignite, MoITT.',
+  description: 'Learn about IGNIS, Pakistan\'s first AI-powered fire detection and smart evacuation platform.',
 }
 
 const teamMembers = [
@@ -57,8 +57,8 @@ const timelineEvents = [
   },
   {
     year: '2026',
-    title: 'NIC Karachi',
-    description: 'Scaling Pakistan\'s first AI-powered intelligent fire safety system with support from National Incubation Center.',
+    title: 'NIC Karachi Application',
+    description: 'Applying to National Incubation Center to scale Pakistan\'s first AI-powered intelligent fire safety system.',
     position: 'right' as const,
   },
 ]
@@ -111,14 +111,7 @@ export default function AboutPage() {
         title="Building a Safer Tomorrow"
         description="IGNIS is Pakistan's first AI-powered fire detection and intelligent evacuation platform, designed to protect lives when every second matters."
       >
-        <div className="flex items-center gap-4 mt-6">
-          <div className="px-4 py-2 bg-forest-green/10 rounded-full border border-forest-green/20">
-            <span className="text-sm font-semibold text-forest-green">Funded by Ignite, MoITT</span>
-          </div>
-          <div className="px-4 py-2 bg-accent-green/10 rounded-full border border-accent-green/20">
-            <span className="text-sm font-semibold text-forest-dark/70">NIC Karachi</span>
-          </div>
-        </div>
+        <p className="text-forest-green font-semibold text-xl mt-4">Detect Fast. Evacuate Smart. Save Lives.</p>
       </PageHero>
 
       {/* Problem Section */}
@@ -219,9 +212,9 @@ export default function AboutPage() {
           <div className="flex flex-wrap justify-center gap-4 text-white/40 text-sm">
             <span>Karachi, Pakistan</span>
             <span>•</span>
-            <span>Funded by Ignite</span>
+            <span>Nationwide Coverage</span>
             <span>•</span>
-            <span>NIC Karachi</span>
+            <span>Enterprise Ready</span>
           </div>
         </div>
       </section>
