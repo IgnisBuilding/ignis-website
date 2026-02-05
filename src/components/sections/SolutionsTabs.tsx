@@ -4,6 +4,20 @@ import { useState } from 'react'
 
 const solutions = [
   {
+    id: 'residential',
+    icon: 'home',
+    tab: 'Residential',
+    title: 'Residential Buildings',
+    description: 'Homes, apartments, and housing complexes need reliable fire protection that safeguards families while they sleep. IGNIS provides 24/7 intelligent monitoring with instant alerts and clear evacuation guidance for residents of all ages.',
+    features: [
+      { icon: 'family_restroom', title: 'Family Safety', description: 'Personalized alerts and guidance for each family member including children and elderly' },
+      { icon: 'nights_stay', title: 'Night Monitoring', description: 'Enhanced detection during sleeping hours with louder, persistent alerts' },
+      { icon: 'smartphone', title: 'Mobile Alerts', description: 'Instant notifications to family members even when away from home' },
+      { icon: 'map', title: 'Safe Exit Routes', description: 'Clear visual and audio guidance to the safest exit from any room' },
+    ],
+    stats: { coverage: '10K+ homes', response: '<2s', accuracy: '99.4%' }
+  },
+  {
     id: 'commercial',
     icon: 'apartment',
     tab: 'Commercial',
@@ -62,7 +76,7 @@ const solutions = [
 ]
 
 export function SolutionsTabs() {
-  const [activeTab, setActiveTab] = useState('commercial')
+  const [activeTab, setActiveTab] = useState('residential')
 
   const activeSolution = solutions.find(s => s.id === activeTab) || solutions[0]
 
