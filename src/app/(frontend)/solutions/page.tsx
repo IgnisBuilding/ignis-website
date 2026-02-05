@@ -48,56 +48,75 @@ export default function SolutionsPage() {
         <SolutionsTabs />
       </section>
 
-      {/* Real Incidents Section */}
-      <section className="w-full bg-forest-dark py-20">
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
-          <div className="text-center mb-16">
-            <p className="text-sm font-medium text-accent-green mb-4">Why This Matters</p>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">Every Fire Has a Story</h2>
-            <p className="text-lg text-white/50 max-w-2xl mx-auto">Real tragedies from Pakistan that could have ended differently with intelligent fire safety.</p>
-          </div>
+      {/* Real Incidents - Timeline Design */}
+      <section className="w-full max-w-[1280px] px-6 lg:px-10 py-20">
+        <div className="text-center mb-16">
+          <p className="text-sm font-medium text-accent-green mb-4">Why This Matters</p>
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-forest-dark tracking-tight mb-6">Every Fire Has a Story</h2>
+          <p className="text-lg text-forest-dark/50 max-w-2xl mx-auto">Real tragedies from Pakistan that could have ended differently with intelligent fire safety.</p>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {realIncidents.map((incident) => (
-              <div key={incident.title} className="bg-white/5 backdrop-blur rounded-2xl border border-white/10 overflow-hidden">
-                {/* Header */}
-                <div className="p-6 border-b border-white/10">
-                  <div className="flex items-start gap-4">
-                    <div className="size-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
-                      <span className="material-symbols-outlined text-white text-2xl">{incident.icon}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-white">{incident.title}</h3>
-                      <p className="text-sm text-white/50">{incident.location}</p>
-                    </div>
+        <div className="relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-6 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-forest-green/20 via-forest-green/40 to-forest-green/20 hidden md:block"></div>
+
+          <div className="space-y-16">
+            {realIncidents.map((incident, index) => (
+              <div key={incident.title} className="relative">
+                {/* Timeline Node */}
+                <div className="absolute left-6 lg:left-1/2 -translate-x-1/2 hidden md:flex">
+                  <div className="size-12 rounded-full bg-forest-green flex items-center justify-center ring-4 ring-cream shadow-lg">
+                    <span className="material-symbols-outlined text-white">{incident.icon}</span>
                   </div>
                 </div>
 
-                {/* What Happened */}
-                <div className="p-6 border-b border-white/10">
-                  <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-2">What Happened</p>
-                  <p className="text-white/70 text-sm leading-relaxed">{incident.description}</p>
-                </div>
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 ${index % 2 === 1 ? '' : ''}`}>
+                  {/* Left Side - Incident Details */}
+                  <div className={`${index % 2 === 1 ? 'lg:order-2' : 'lg:text-right'} md:pr-16 lg:pr-0`}>
+                    <div className={`${index % 2 === 1 ? '' : 'lg:ml-auto'} max-w-md`}>
+                      {/* Mobile Icon */}
+                      <div className="mb-4 md:hidden flex items-center gap-3">
+                        <div className="size-10 rounded-full bg-forest-green flex items-center justify-center">
+                          <span className="material-symbols-outlined text-white text-lg">{incident.icon}</span>
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-forest-dark">{incident.title}</h3>
+                          <p className="text-sm text-forest-dark/50">{incident.location}</p>
+                        </div>
+                      </div>
 
-                {/* Casualties */}
-                <div className="p-6 border-b border-white/10 bg-white/5">
-                  <p className="text-xs font-semibold text-white/40 uppercase tracking-wider mb-3">Human Cost</p>
-                  <div className="flex gap-6">
-                    <div>
-                      <p className="text-2xl font-bold text-white">{incident.casualties.deaths}</p>
-                      <p className="text-xs text-white/50">Lives Lost</p>
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold text-white">{incident.casualties.injured}</p>
-                      <p className="text-xs text-white/50">Injured</p>
+                      {/* Desktop Title */}
+                      <div className="hidden md:block mb-4">
+                        <h3 className="text-2xl font-bold text-forest-dark">{incident.title}</h3>
+                        <p className="text-sm text-forest-green font-medium">{incident.location}</p>
+                      </div>
+
+                      {/* What Happened */}
+                      <div className="bg-cream rounded-xl p-5 border border-forest-green/10">
+                        <p className="text-forest-dark/70 text-sm leading-relaxed mb-4">{incident.description}</p>
+                        <div className="flex gap-6 pt-4 border-t border-forest-green/10">
+                          <div>
+                            <p className="text-2xl font-bold text-forest-dark">{incident.casualties.deaths}</p>
+                            <p className="text-xs text-forest-dark/50">Lives Lost</p>
+                          </div>
+                          <div>
+                            <p className="text-2xl font-bold text-forest-dark">{incident.casualties.injured}</p>
+                            <p className="text-xs text-forest-dark/50">Injured</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* How IGNIS Could Help */}
-                <div className="p-6">
-                  <p className="text-xs font-semibold text-accent-green uppercase tracking-wider mb-2">How IGNIS Could Help</p>
-                  <p className="text-white/60 text-sm leading-relaxed">{incident.lesson}</p>
+                  {/* Right Side - How IGNIS Could Help */}
+                  <div className={`${index % 2 === 1 ? 'lg:order-1 lg:text-right' : ''} md:pl-16 lg:pl-0`}>
+                    <div className={`${index % 2 === 1 ? 'lg:mr-auto' : ''} max-w-md`}>
+                      <div className="bg-forest-green/5 rounded-xl p-5 border-l-4 border-forest-green">
+                        <p className="text-xs font-semibold text-forest-green uppercase tracking-wider mb-2">How IGNIS Could Help</p>
+                        <p className="text-forest-dark/70 text-sm leading-relaxed">{incident.lesson}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -105,9 +124,10 @@ export default function SolutionsPage() {
 
           {/* Bottom Message */}
           <div className="mt-16 text-center">
-            <p className="text-white/40 text-sm max-w-xl mx-auto">
-              These tragedies highlight the urgent need for intelligent fire safety systems that go beyond basic alarms—systems that detect, guide, and save lives.
-            </p>
+            <div className="inline-flex items-center gap-3 bg-forest-green text-white px-6 py-3 rounded-full shadow-lg">
+              <span className="material-symbols-outlined">shield</span>
+              <span className="text-sm font-medium">Building a safer Pakistan with intelligent fire safety</span>
+            </div>
           </div>
         </div>
       </section>
