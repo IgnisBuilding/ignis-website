@@ -39,26 +39,26 @@ const teamMembers = [
 const timelineEvents = [
   {
     year: '2025',
-    title: 'IoBM Competition',
-    description: 'Competed in IoBM Startup Competition. Validated fire safety problem and refined our solution concept.',
+    title: 'Research & Planning',
+    description: 'Initial research phase covering literature review, feasibility analysis, and system architecture design for AI-powered fire detection.',
     position: 'left' as const,
   },
   {
     year: '2025',
-    title: 'HBL Pasha Awards',
-    description: 'Participated in HBL Pasha Awards. Refined pitch and expanded industry network.',
+    title: 'AI Model Development',
+    description: 'Training and optimizing neural networks for real-time fire and smoke detection using computer vision and thermal imaging data.',
     position: 'right' as const,
   },
   {
     year: '2026',
-    title: 'Product Development',
-    description: 'Built complete platform with real-time fire detection, dynamic evacuation routing, and rescue team support.',
+    title: 'System Integration',
+    description: 'Integrating AI detection models with intelligent evacuation routing algorithms and real-time sensor network communication.',
     position: 'left' as const,
   },
   {
     year: '2026',
-    title: 'NIC Karachi & Ignite',
-    description: 'Applying to National Incubation Center (NIC Karachi) funded by Ignite, MoITT to scale Pakistan\'s first AI-powered fire safety system.',
+    title: 'Testing & Deployment',
+    description: 'Comprehensive system testing, performance benchmarking, documentation, and preparing for market launch.',
     position: 'right' as const,
   },
 ]
@@ -192,8 +192,8 @@ export default function AboutPage() {
 
       {/* Timeline */}
       <Timeline
-        subtitle="OUR JOURNEY"
-        title="Traction & Progress"
+        subtitle="PROJECT TIMELINE"
+        title="Our Development Journey"
         events={timelineEvents}
       />
 
