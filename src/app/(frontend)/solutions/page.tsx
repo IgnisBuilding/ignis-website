@@ -60,7 +60,7 @@ export default function SolutionsPage() {
         <SolutionsTabs />
       </section>
 
-      {/* Real Incidents - Timeline Design */}
+      {/* Real Incidents - Center Timeline Design */}
       <section className="w-full max-w-[1280px] px-6 lg:px-10 py-20">
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-accent-green mb-4">Why This Matters</p>
@@ -69,56 +69,71 @@ export default function SolutionsPage() {
         </div>
 
         <div className="relative">
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-[23px] lg:left-8 top-0 bottom-0 w-px bg-forest-green/20 hidden md:block"></div>
+          {/* Center Timeline Line */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-forest-green/30 hidden lg:block"></div>
 
-          <div className="space-y-12">
-            {realIncidents.map((incident) => (
-              <div key={incident.title} className="relative md:pl-20">
-                {/* Timeline Node - Year */}
-                <div className="absolute left-0 top-0 hidden md:flex flex-col items-center">
-                  <div className="size-12 rounded-full bg-forest-green flex items-center justify-center shadow-md">
-                    <span className="material-symbols-outlined text-white">{incident.icon}</span>
+          <div className="space-y-16 lg:space-y-24">
+            {realIncidents.map((incident, index) => (
+              <div key={incident.title} className="relative">
+                {/* Center Timeline Node */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-8 hidden lg:flex flex-col items-center z-10">
+                  <div className="size-14 rounded-full bg-forest-green flex items-center justify-center shadow-lg ring-4 ring-white">
+                    <span className="material-symbols-outlined text-white text-2xl">{incident.icon}</span>
                   </div>
-                  <span className="text-xs font-bold text-forest-green mt-2">{incident.year}</span>
+                  <div className="mt-2 px-3 py-1 bg-forest-green rounded-full">
+                    <span className="text-xs font-bold text-white">{incident.year}</span>
+                  </div>
                 </div>
 
-                {/* Content */}
-                <div className="bg-white rounded-2xl border border-forest-green/15 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <div className="p-6 lg:p-8">
-                    {/* Header */}
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-5">
-                      <div className="flex items-center gap-3">
-                        {/* Mobile Icon */}
-                        <div className="size-10 rounded-full bg-forest-green flex items-center justify-center md:hidden">
-                          <span className="material-symbols-outlined text-white text-lg">{incident.icon}</span>
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20`}>
+                  {/* Left Side - Incident Details */}
+                  <div className={`${index % 2 === 0 ? 'lg:pr-16' : 'lg:order-2 lg:pl-16'}`}>
+                    <div className={`${index % 2 === 0 ? 'lg:text-right' : ''}`}>
+                      {/* Mobile Header */}
+                      <div className="flex items-center gap-3 mb-4 lg:hidden">
+                        <div className="size-12 rounded-full bg-forest-green flex items-center justify-center">
+                          <span className="material-symbols-outlined text-white">{incident.icon}</span>
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-forest-dark">{incident.title}</h3>
-                          <p className="text-sm text-forest-dark/50">{incident.location} <span className="md:hidden">• {incident.year}</span></p>
+                          <p className="text-sm text-forest-dark/50">{incident.location} • {incident.year}</p>
                         </div>
                       </div>
-                      <div className="flex gap-4">
-                        <div className="text-center px-4 py-2 bg-forest-dark/5 rounded-lg">
-                          <p className="text-xl font-bold text-forest-dark">{incident.casualties.deaths}</p>
-                          <p className="text-[10px] text-forest-dark/50 uppercase tracking-wider">Deaths</p>
-                        </div>
-                        <div className="text-center px-4 py-2 bg-forest-dark/5 rounded-lg">
-                          <p className="text-xl font-bold text-forest-dark">{incident.casualties.injured}</p>
-                          <p className="text-[10px] text-forest-dark/50 uppercase tracking-wider">Injured</p>
+
+                      {/* Desktop Header */}
+                      <div className="hidden lg:block mb-4">
+                        <h3 className="text-2xl font-bold text-forest-dark">{incident.title}</h3>
+                        <p className="text-sm text-forest-green font-medium">{incident.location}</p>
+                      </div>
+
+                      {/* Incident Card */}
+                      <div className="bg-white rounded-2xl p-6 border border-forest-green/15 shadow-sm">
+                        <p className="text-forest-dark/60 text-sm leading-relaxed mb-5">{incident.description}</p>
+                        <div className={`flex gap-4 ${index % 2 === 0 ? 'lg:justify-end' : ''}`}>
+                          <div className={`text-center px-4 py-2 bg-forest-dark/5 rounded-lg ${index % 2 === 0 ? '' : ''}`}>
+                            <p className="text-2xl font-bold text-forest-dark">{incident.casualties.deaths}</p>
+                            <p className="text-[10px] text-forest-dark/50 uppercase tracking-wider">Deaths</p>
+                          </div>
+                          <div className="text-center px-4 py-2 bg-forest-dark/5 rounded-lg">
+                            <p className="text-2xl font-bold text-forest-dark">{incident.casualties.injured}</p>
+                            <p className="text-[10px] text-forest-dark/50 uppercase tracking-wider">Injured</p>
+                          </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    {/* Description */}
-                    <p className="text-forest-dark/60 text-sm leading-relaxed mb-5">{incident.description}</p>
-
-                    {/* IGNIS Solution */}
-                    <div className="flex gap-3 p-4 bg-forest-green/5 rounded-xl">
-                      <span className="material-symbols-outlined text-forest-green text-xl flex-shrink-0">lightbulb</span>
-                      <div>
-                        <p className="text-xs font-semibold text-forest-green uppercase tracking-wider mb-1">With IGNIS</p>
-                        <p className="text-forest-dark/70 text-sm">{incident.lesson}</p>
+                  {/* Right Side - IGNIS Solution */}
+                  <div className={`${index % 2 === 0 ? 'lg:pl-16' : 'lg:order-1 lg:pr-16 lg:text-right'}`}>
+                    <div className={`lg:pt-12`}>
+                      <div className={`bg-forest-green/5 rounded-2xl p-6 border-l-4 lg:border-l-0 ${index % 2 === 0 ? 'lg:border-l-4' : 'lg:border-r-4'} border-forest-green`}>
+                        <div className={`flex gap-3 ${index % 2 === 0 ? '' : 'lg:flex-row-reverse'}`}>
+                          <span className="material-symbols-outlined text-forest-green text-xl flex-shrink-0">lightbulb</span>
+                          <div>
+                            <p className="text-xs font-semibold text-forest-green uppercase tracking-wider mb-2">With IGNIS</p>
+                            <p className="text-forest-dark/70 text-sm leading-relaxed">{incident.lesson}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -128,10 +143,11 @@ export default function SolutionsPage() {
           </div>
 
           {/* Bottom Message */}
-          <div className="mt-16 text-center">
-            <p className="text-forest-dark/40 text-sm max-w-lg mx-auto">
-              These tragedies remind us why intelligent fire safety matters. Detection alone isn&apos;t enough—we need systems that guide people to safety.
-            </p>
+          <div className="mt-20 text-center">
+            <div className="inline-flex items-center gap-3 bg-forest-green text-white px-6 py-3 rounded-full shadow-lg">
+              <span className="material-symbols-outlined">shield</span>
+              <span className="text-sm font-medium">Building a safer Pakistan with intelligent fire safety</span>
+            </div>
           </div>
         </div>
       </section>
