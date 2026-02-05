@@ -32,7 +32,7 @@ export default function HomePage() {
         }
         description="An AI-powered fire detection and evacuation system designed to save lives when every second matters."
         primaryCta={{ label: 'Request Demo', href: '/contact' }}
-        secondaryCta={{ label: 'Explore Architecture', href: '/architecture' }}
+        secondaryCta={{ label: 'View Solutions', href: '/solutions' }}
       />
       <FeatureStrip features={features} />
     </>

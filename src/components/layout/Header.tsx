@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/solutions', label: 'Solutions' },
   { href: '/technology', label: 'Technology' },
-  { href: '/architecture', label: 'Architecture' },
+  // { href: '/architecture', label: 'Architecture' }, // Hidden - technical details not for public
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]

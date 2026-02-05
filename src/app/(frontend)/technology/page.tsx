@@ -162,11 +162,11 @@ export default function TechnologyPage() {
         <div className="bg-cream-dark rounded-3xl p-8 lg:p-12 text-center border border-forest-green/20">
           <h2 className="text-2xl font-bold text-forest-dark mb-4">Want to Learn More?</h2>
           <p className="text-forest-dark/70 max-w-xl mx-auto mb-6">
-            Explore our system architecture or get in touch to discuss how IGNIS
-            can be adapted for your research or institution.
+            Explore our solutions or get in touch to discuss how IGNIS
+            can protect your home or business.
           </p>
           <div className="flex justify-center gap-4">
-            <Button href="/architecture" variant="primary">View Architecture</Button>
+            <Button href="/solutions" variant="primary">View Solutions</Button>
             <Button href="/contact" variant="outline">Contact Us</Button>
           </div>
         </div>
