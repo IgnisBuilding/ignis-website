@@ -94,7 +94,7 @@ export function SolutionsTabs() {
                 : 'bg-white text-forest-dark/70 border border-forest-green/20 hover:border-forest-green/40 hover:text-forest-dark'
             }`}
           >
-            <img src="/logo-icon.svg" alt="" className="w-5 h-5" />
+            <span className="material-symbols-outlined text-lg">{solution.icon}</span>
             {solution.tab}
           </button>
         ))}
