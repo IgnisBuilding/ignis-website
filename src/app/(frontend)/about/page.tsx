@@ -63,6 +63,33 @@ const timelineEvents = [
   },
 ]
 
+const tractionEvents = [
+  {
+    year: '2025',
+    title: 'IoBM Competition',
+    description: 'Competed in IoBM Startup Competition. Validated fire safety problem and refined our solution concept.',
+    position: 'left' as const,
+  },
+  {
+    year: '2025',
+    title: 'HBL Pasha Awards',
+    description: 'Participated in HBL Pasha Awards. Refined pitch and expanded industry network.',
+    position: 'right' as const,
+  },
+  {
+    year: '2026',
+    title: 'Product Development',
+    description: 'Built complete platform with real-time fire detection, dynamic evacuation routing, and rescue team support.',
+    position: 'left' as const,
+  },
+  {
+    year: '2026',
+    title: 'NIC Karachi & Ignite',
+    description: 'Applying to National Incubation Center (NIC Karachi) funded by Ignite, MoITT to scale Pakistan\'s first AI-powered fire safety system.',
+    position: 'right' as const,
+  },
+]
+
 const visionPoints = [
   {
     icon: 'check_circle',
@@ -195,6 +222,13 @@ export default function AboutPage() {
         subtitle="PROJECT TIMELINE"
         title="Our Development Journey"
         events={timelineEvents}
+      />
+
+      {/* Traction & Progress */}
+      <Timeline
+        subtitle="TRACTION & PROGRESS"
+        title="Milestones & Achievements"
+        events={tractionEvents}
       />
 
       {/* CTA */}
