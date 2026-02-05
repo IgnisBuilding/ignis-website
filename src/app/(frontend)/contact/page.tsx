@@ -18,7 +18,7 @@ const projectInfo = [
   },
   {
     title: 'Status',
-    items: ['Prototype Stage', 'Demo Available', 'Academic Evaluation'],
+    items: ['System Complete', 'Field Testing Phase', 'Demo Available'],
   },
   {
     title: 'Institution',

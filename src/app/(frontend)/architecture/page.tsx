@@ -441,30 +441,36 @@ export default function ArchitecturePage() {
         </div>
       </section>
 
-      {/* Integration */}
+      {/* Future Roadmap */}
       <section className="w-full max-w-[1280px] px-6 lg:px-10 pb-16">
         <div className="bg-forest-dark rounded-3xl p-8 lg:p-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">Integration Ready</h2>
-              <p className="text-white/70 mb-6">
-                IGNIS provides comprehensive APIs for integration with existing
-                building management systems, emergency services, and third-party applications.
-              </p>
-              <ul className="space-y-3">
-                {['RESTful API endpoints', 'WebSocket real-time streams', 'MQTT sensor protocol', 'BACnet BMS integration'].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-white/80 text-sm">
-                    <div className="size-1.5 rounded-full bg-accent-green shrink-0"></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="text-center">
-              <div className="bg-white/10 rounded-2xl p-8 inline-block">
-                <span className="material-symbols-outlined text-accent-green text-6xl">api</span>
-                <p className="text-white/60 text-sm mt-4">Open API Architecture</p>
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-white mb-3">Future Roadmap</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Our vision for expanding IGNIS after successful field testing and deployment
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <div className="size-12 rounded-xl bg-accent-green/20 flex items-center justify-center mb-4">
+                <span className="material-symbols-outlined text-accent-green text-2xl">domain</span>
               </div>
+              <h3 className="text-white font-semibold mb-2">Multi-Building Deployment</h3>
+              <p className="text-white/50 text-sm">Scaling IGNIS to manage multiple facilities from a centralized dashboard</p>
+            </div>
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <div className="size-12 rounded-xl bg-accent-green/20 flex items-center justify-center mb-4">
+                <span className="material-symbols-outlined text-accent-green text-2xl">emergency</span>
+              </div>
+              <h3 className="text-white font-semibold mb-2">Emergency Services Integration</h3>
+              <p className="text-white/50 text-sm">Direct communication with fire departments and first responders</p>
+            </div>
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <div className="size-12 rounded-xl bg-accent-green/20 flex items-center justify-center mb-4">
+                <span className="material-symbols-outlined text-accent-green text-2xl">model_training</span>
+              </div>
+              <h3 className="text-white font-semibold mb-2">Enhanced AI Models</h3>
+              <p className="text-white/50 text-sm">Continuous improvement with real-world field data and expanded training sets</p>
             </div>
           </div>
         </div>

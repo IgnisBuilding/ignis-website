@@ -21,18 +21,28 @@ export function Footer() {
 
             {/* Column 1: Brand */}
             <div className="flex flex-col items-center md:items-start">
-              <Link href="/" className="mb-5">
+              <Link href="/" className="-mt-8">
                 <Image
                   src="/ignis_logo.png"
                   alt="IGNIS"
-                  width={240}
-                  height={78}
-                  className="h-[78px] w-auto"
+                  width={280}
+                  height={91}
+                  className="h-[100px] w-auto"
                 />
               </Link>
-              <p className="text-white/50 text-sm leading-relaxed text-center md:text-left">
-                AI-powered fire detection and intelligent evacuation system.
+              <p className="text-white/80 text-sm leading-relaxed text-center md:text-left mb-6">
+                AI-powered fire detection and intelligent evacuation system designed to save lives.
               </p>
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full">
+                  <span className="material-symbols-outlined text-accent-green text-sm">verified</span>
+                  <span className="text-xs text-white/80">99.2% Accuracy</span>
+                </div>
+                <div className="flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full">
+                  <span className="material-symbols-outlined text-accent-green text-sm">speed</span>
+                  <span className="text-xs text-white/80">&lt;3s Response</span>
+                </div>
+              </div>
             </div>
 
             {/* Column 2: Quick Links */}
@@ -43,7 +53,7 @@ export function Footer() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-sm text-white/50 hover:text-accent-green transition-colors"
+                    className="text-sm text-white/80 hover:text-accent-green transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -56,12 +66,12 @@ export function Footer() {
               <h4 className="text-sm font-semibold text-white mb-5">Get in Touch</h4>
               <a
                 href="mailto:ignis.fyp@gmail.com"
-                className="text-sm text-white/50 hover:text-accent-green transition-colors mb-2"
+                className="text-sm text-white hover:text-accent-green transition-colors mb-2"
               >
                 ignis.fyp@gmail.com
               </a>
-              <p className="text-sm text-white/50 mb-1">FAST-NUCES Karachi</p>
-              <p className="text-xs text-white/30 mb-6">Computer Science • FYP 2025-2026</p>
+              <p className="text-sm text-white/80 mb-1">FAST-NUCES Karachi</p>
+              <p className="text-xs text-white/70 mb-6">Computer Science • FYP 2025-2026</p>
               <Button href="/contact" variant="primary" size="sm">
                 Request Demo
               </Button>
@@ -69,11 +79,11 @@ export function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-white/30">
+          <div className="mt-14 pt-6 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-white/70">
               © 2026 IGNIS. All rights reserved.
             </p>
-            <div className="flex items-center gap-2 text-xs text-white/30">
+            <div className="flex items-center gap-2 text-xs text-white/70">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-green"></span>
               Built with passion at FAST-NUCES
             </div>

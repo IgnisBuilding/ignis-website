@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 
 const navLinks = [
+  { href: '/', label: 'Home' },
   { href: '/solutions', label: 'Solutions' },
   { href: '/technology', label: 'Technology' },
   { href: '/architecture', label: 'Architecture' },
