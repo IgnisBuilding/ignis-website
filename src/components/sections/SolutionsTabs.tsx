@@ -8,70 +8,70 @@ const solutions = [
     icon: 'home',
     tab: 'Residential',
     title: 'Residential Buildings',
-    description: 'Homes, apartments, and housing complexes need reliable fire protection that safeguards families while they sleep. IGNIS provides 24/7 intelligent monitoring with instant alerts and clear evacuation guidance for residents of all ages.',
+    description: 'Homes, apartments, and housing complexes need reliable fire protection that safeguards families. IGNIS provides intelligent monitoring with instant alerts and clear evacuation guidance for residents.',
     features: [
-      { icon: 'family_restroom', title: 'Family Safety', description: 'Personalized alerts and guidance for each family member including children and elderly' },
-      { icon: 'nights_stay', title: 'Night Monitoring', description: 'Enhanced detection during sleeping hours with louder, persistent alerts' },
-      { icon: 'smartphone', title: 'Mobile Alerts', description: 'Instant notifications to family members even when away from home' },
-      { icon: 'map', title: 'Safe Exit Routes', description: 'Clear visual and audio guidance to the safest exit from any room' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Camera-based fire detection with anti-spoofing to distinguish real fires from screens' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided turn-by-turn directions to the nearest safe exit' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'WiFi-based tracking to locate occupants in real-time' },
+      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Real-time view of fire location and occupant positions for responders' },
     ],
-    stats: { market: '75,000+', marketLabel: 'Buildings in Pakistan', response: '<2s', accuracy: '99.4%' }
+    stats: { market: '75,000+', marketLabel: 'Buildings in Pakistan' }
   },
   {
     id: 'commercial',
     icon: 'apartment',
     tab: 'Commercial',
     title: 'Commercial Buildings',
-    description: 'Office complexes, shopping centers, and business facilities with high occupancy require sophisticated fire detection and evacuation systems that can handle complex layouts and large numbers of occupants.',
+    description: 'Office complexes, shopping centers, and business facilities with high occupancy require intelligent fire detection and evacuation systems that can handle complex layouts.',
     features: [
-      { icon: 'stairs', title: 'Multi-floor Evacuation', description: 'Intelligent routing across multiple floors with real-time stairwell monitoring' },
-      { icon: 'elevator', title: 'Elevator Integration', description: 'Automatic elevator recall and safe floor designation during emergencies' },
-      { icon: 'groups', title: 'Crowd Analysis', description: 'AI-powered density monitoring to prevent dangerous bottlenecks' },
-      { icon: 'notifications_active', title: 'Zone Alerts', description: 'Targeted notifications to specific building zones and tenants' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Camera-based fire detection with anti-spoofing to eliminate false alarms' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided evacuation directing each person to the nearest safe exit' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Real-time occupant tracking across multiple floors' },
+      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Emergency screen showing exact fire location and all occupant positions' },
     ],
-    stats: { market: '11,000+', marketLabel: 'Malls in Pakistan', response: '<2s', accuracy: '99.5%' }
+    stats: { market: '11,000+', marketLabel: 'Malls in Pakistan' }
   },
   {
     id: 'educational',
     icon: 'school',
     tab: 'Educational',
     title: 'Educational Institutions',
-    description: 'Schools, universities, and research facilities require special safety protocols to protect students, staff, and sensitive research equipment while maintaining organized evacuation procedures.',
+    description: 'Schools and universities require safety systems that protect students and staff while enabling organized evacuation procedures during emergencies.',
     features: [
-      { icon: 'campaign', title: 'Classroom Alerts', description: 'Room-specific notifications with teacher override controls' },
-      { icon: 'location_on', title: 'Assembly Coordination', description: 'Automated headcount and assembly point management' },
-      { icon: 'accessible', title: 'Accessibility Support', description: 'Special routing for students with mobility requirements' },
-      { icon: 'lock', title: 'Lockdown Integration', description: 'Seamless coordination between fire and security systems' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Visual fire detection through camera feeds with false alarm prevention' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Clear voice guidance directing students and staff to safe exits' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Track occupant locations to ensure everyone evacuates safely' },
+      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Real-time emergency view for rescue teams to locate anyone trapped' },
     ],
-    stats: { market: '278,000+', marketLabel: 'Institutions in Pakistan', response: '<3s', accuracy: '99.2%' }
+    stats: { market: '278,000+', marketLabel: 'Institutions in Pakistan' }
   },
   {
     id: 'healthcare',
     icon: 'local_hospital',
     tab: 'Healthcare',
     title: 'Healthcare Facilities',
-    description: 'Hospitals and clinics face unique challenges with critical patients, sensitive medical equipment, and the need for continuous operation even during emergencies.',
+    description: 'Hospitals and clinics face unique challenges with patients who may have limited mobility and the need for continuous operation during emergencies.',
     features: [
-      { icon: 'hotel', title: 'Patient Awareness', description: 'Mobility tracking and priority evacuation for critical patients' },
-      { icon: 'biotech', title: 'Equipment Protection', description: 'Automated protocols for sensitive medical equipment' },
-      { icon: 'badge', title: 'Staff Coordination', description: 'Role-based alerts and responsibility assignment' },
-      { icon: 'emergency', title: 'OR Protection', description: 'Special protocols for operating rooms and ICUs' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Intelligent fire detection that eliminates false alarms from medical equipment' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided evacuation with priority routing for patient areas' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Track patients and staff locations for coordinated evacuation' },
+      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Real-time view showing fire spread and occupant positions for targeted rescue' },
     ],
-    stats: { market: '1,900+', marketLabel: 'Hospitals in Pakistan', response: '<2s', accuracy: '99.8%' }
+    stats: { market: '1,900+', marketLabel: 'Hospitals in Pakistan' }
   },
   {
     id: 'industrial',
     icon: 'factory',
     tab: 'Industrial',
     title: 'Industrial Sites',
-    description: 'Manufacturing plants and warehouses with hazardous materials require specialized detection systems and evacuation protocols that account for chemical hazards and equipment safety.',
+    description: 'Manufacturing plants and warehouses require specialized detection systems and evacuation guidance that accounts for complex facility layouts.',
     features: [
-      { icon: 'science', title: 'Hazmat Mapping', description: 'Real-time tracking of hazardous material locations' },
-      { icon: 'power_settings_new', title: 'Equipment Shutdown', description: 'Automated safe shutdown sequences for machinery' },
-      { icon: 'person_pin_circle', title: 'Worker Tracking', description: 'Real-time location tracking for all personnel' },
-      { icon: 'air', title: 'Ventilation Control', description: 'Automated HVAC response to contain smoke spread' },
+      { icon: 'videocam', title: 'AI Fire Detection', description: 'Camera-based detection optimized for industrial environments' },
+      { icon: 'record_voice_over', title: 'Voice Navigation', description: 'Voice-guided evacuation directing workers to nearest safe exits' },
+      { icon: 'my_location', title: 'Indoor Positioning', description: 'Real-time location tracking for all personnel on site' },
+      { icon: 'dashboard', title: 'Rescue Dashboard', description: 'Emergency dashboard showing fire location and worker positions' },
     ],
-    stats: { market: '3,200+', marketLabel: 'Plants in Pakistan', response: '<1.5s', accuracy: '99.9%' }
+    stats: { market: '3,200+', marketLabel: 'Plants in Pakistan' }
   },
 ]
 
@@ -116,19 +116,11 @@ export function SolutionsTabs() {
               {activeSolution.description}
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 p-4 bg-cream rounded-2xl mb-8">
+            {/* Market Size */}
+            <div className="p-4 bg-cream rounded-2xl mb-8">
               <div className="text-center">
-                <p className="text-xl font-bold text-forest-green">{activeSolution.stats.market}</p>
-                <p className="text-xs text-forest-dark/50">{activeSolution.stats.marketLabel}</p>
-              </div>
-              <div className="text-center border-x border-forest-green/10">
-                <p className="text-xl font-bold text-forest-green">{activeSolution.stats.response}</p>
-                <p className="text-xs text-forest-dark/50">Response</p>
-              </div>
-              <div className="text-center">
-                <p className="text-xl font-bold text-forest-green">{activeSolution.stats.accuracy}</p>
-                <p className="text-xs text-forest-dark/50">Accuracy</p>
+                <p className="text-3xl font-bold text-forest-green">{activeSolution.stats.market}</p>
+                <p className="text-sm text-forest-dark/50">{activeSolution.stats.marketLabel}</p>
               </div>
             </div>
           </div>
