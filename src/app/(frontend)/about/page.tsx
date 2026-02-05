@@ -36,33 +36,6 @@ const teamMembers = [
   },
 ]
 
-const timelineEvents = [
-  {
-    year: '2025',
-    title: 'Research & Planning',
-    description: 'Initial research phase covering literature review, feasibility analysis, and system architecture design for AI-powered fire detection.',
-    position: 'left' as const,
-  },
-  {
-    year: '2025',
-    title: 'AI Model Development',
-    description: 'Training and optimizing neural networks for real-time fire and smoke detection using computer vision and thermal imaging data.',
-    position: 'right' as const,
-  },
-  {
-    year: '2026',
-    title: 'System Integration',
-    description: 'Integrating AI detection models with intelligent evacuation routing algorithms and real-time sensor network communication.',
-    position: 'left' as const,
-  },
-  {
-    year: '2026',
-    title: 'Testing & Deployment',
-    description: 'Comprehensive system testing, performance benchmarking, documentation, and preparing for market launch.',
-    position: 'right' as const,
-  },
-]
-
 const tractionEvents = [
   {
     year: '2025',
@@ -215,13 +188,6 @@ export default function AboutPage() {
         title="Meet the Team"
         subtitle="A dedicated team of engineers building the future of fire safety in Pakistan."
         members={teamMembers}
-      />
-
-      {/* Timeline */}
-      <Timeline
-        subtitle="PROJECT TIMELINE"
-        title="Our Development Journey"
-        events={timelineEvents}
       />
 
       {/* Traction & Progress */}
