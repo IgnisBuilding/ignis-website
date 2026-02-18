@@ -102,7 +102,7 @@ export function SolutionsTabs() {
 
       {/* Content */}
       <div className="bg-white rounded-3xl border border-forest-green/30 overflow-hidden shadow-sm">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div key={activeTab} className="grid grid-cols-1 lg:grid-cols-2 animate-fade-in">
           {/* Left - Info */}
           <div className="p-8 lg:p-12">
             <div className="flex items-center gap-4 mb-6">

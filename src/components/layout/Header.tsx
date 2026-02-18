@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/solutions', label: 'Solutions' },
   // { href: '/technology', label: 'Technology' }, // Hidden - protect IP
   // { href: '/architecture', label: 'Architecture' }, // Hidden - technical details not for public
-  { href: '/about', label: 'About' },
+  { href: '/team', label: 'Team' },
   { href: '/contact', label: 'Contact' },
 ]
 

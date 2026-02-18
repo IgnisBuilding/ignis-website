@@ -5,10 +5,11 @@ interface PageHeroProps {
   }
   title: string
   description: string
+  centered?: boolean
   children?: React.ReactNode
 }
 
-export function PageHero({ badge, title, description, children }: PageHeroProps) {
+export function PageHero({ badge, title, description, centered = false, children }: PageHeroProps) {
   return (
     <section className="w-full max-w-[1280px] px-6 lg:px-10 pt-6 pb-10 lg:pt-8 lg:pb-12 relative overflow-hidden">
       {/* Decorative Elements */}
@@ -20,7 +21,7 @@ export function PageHero({ badge, title, description, children }: PageHeroProps)
       <div className="absolute top-40 right-40 size-3 bg-accent-green/10 rounded-full hidden lg:block"></div>
       <div className="absolute bottom-20 right-1/3 size-2 bg-forest-green/10 rounded-full hidden lg:block"></div>
 
-      <div className="max-w-3xl relative">
+      <div className={`relative ${centered ? 'max-w-4xl mx-auto text-center' : 'max-w-3xl'}`}>
         <h1 className="text-forest-dark text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
           {title}
         </h1>
